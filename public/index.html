@@ -675,13 +675,13 @@
 
       <!-- start register-bait -->
       <section
-        class="mt-8 m-auto h-[55vh] md:h-[45vh] max-w-[1280px] flex flex-col md:flex-row gap-4 md:gap-8"
+        class="mt-8 m-auto h-[65vh] md:h-[45vh] max-w-[1280px] flex flex-col md:flex-row gap-4 md:gap-8"
       >
         <div
-          class="rounded-lg h-[10rem] bg-slate-200 md:h-full w-full md:w-[40%] overflow-hidden relative"
+          class="rounded-lg h-[13rem] bg-slate-200 md:h-full w-full md:w-[40%] overflow-hidden relative"
         >
           <img
-            class="absolute -top-28 md:top-0 left-0 md:h-full object-cover"
+            class="absolute -top-14 md:top-0 left-0 md:h-full object-cover"
             src="aset/enterprise-2024.webp"
             alt="cvr"
           />
@@ -812,9 +812,11 @@
             </div>
           </div>
 
-          <div class="flex gap-2 w-[25rem] h-12 justify-between">
+          <div
+            class="flex gap-2 max-w-full md:max-w-[323px] h-12 justify-between"
+          >
             <button
-              class="flex items-center justify-center gap-2 h-full w-[12rem] bg-black rounded-lg"
+              class="flex items-center justify-center gap-2 px-4 bg-black hover:bg-[#2e2e2e] rounded-lg"
             >
               <p class="font-poppins font-normal text-teal-400">
                 Daftar Gratis
@@ -832,9 +834,13 @@
               </svg>
             </button>
             <button
-              class="h-full w-[12rem] bg-none border-teal-600 border rounded-lg"
+              class="px-5 bg-none hover:border-teal-950 border-teal-600 border rounded-lg"
             >
-              <p class="font-poppins font-light text-teal-600">Cara Merekrut</p>
+              <p
+                class="font-poppins font-light hover:text-teal-950 text-teal-600"
+              >
+                Cara Merekrut
+              </p>
             </button>
           </div>
         </div>
@@ -899,25 +905,29 @@
 
       <!-- start konsultasi bait -->
       <section
-        class="mt-20 flex justify-between m-auto h-[34rem] max-w-[1280px] bg-[#005D5F] overflow-hidden rounded-lg"
+        class="mt-20 flex flex-col lg:flex-row justify-between m-auto lg:h-[34rem] max-w-[1280px] bg-[#005D5F] overflow-hidden rounded-lg"
       >
         <div
           class="text-white px-8 py-8 font-poppins flex flex-col justify-between h-full w-full bg-[#0000001e]"
         >
-          <h3 class="text-[1.5rem] text-normal">Konsultasi</h3>
-          <h1 class="text-[2.9rem] text-medium leading-[3.5rem]">
+          <h3 class="text-[1.5rem] text-normal mb-4 lg:mb-0">Konsultasi</h3>
+          <h1
+            class="mb-4 lg:mb-0 text-[2.1rem] lg:text-[2.9rem] text-medium leading-[2.4rem] lg:leading-[3.5rem]"
+          >
             Karier Anda,<br />pertumbuhan Anda,<br /><span
-              class="text-[#5BD7D3] text-[2.9rem] text-medium"
+              class="text-[#5BD7D3] text-[2.1rem] lg:text-[2.9rem] text-medium leading-[2.4rem] lg:leading-[3.5rem]"
               >dukugan dari kami</span
             >
           </h1>
-          <p class="font-normal text-[1.1rem] w-[38rem] leading-[1.7rem]">
+          <p
+            class="mb-6 lg:mb-0 font-normal text-[1.1rem] lg:w-[38rem] leading-[1.7rem]"
+          >
             Dapatkan saran karier pribadi dari para ahli untuk membantu Anda
             menavigasi pasar kerja. Perkuat perjalanan karier Anda dengan
             wawasan yang tepat.
           </p>
 
-          <div class="flex flex-col gap-3">
+          <div class="mb-6 lg:mb-0 flex flex-col gap-3">
             <div class="flex gap-3">
               <svg
                 fill="#5BD7D3"
@@ -964,36 +974,36 @@
               </p>
             </div>
           </div>
-          <button
-            class="bg-white rounded-lg w-[11rem] h-[3.4rem] text-teal-600 font-medium"
+          <a
+            href="konsultasi.html"
+            class="bg-white hover:bg-gray-200 flex items-center justify-center rounded-lg w-[11rem] h-[3.4rem] text-teal-600 font-medium"
           >
             Selengkapnya
-          </button>
+          </a>
         </div>
-        <img class="h-ful" src="aset/cover.png" alt="cv" />
+        <img class="h-full hidden lg:block" src="aset/cover.png" alt="cv" />
       </section>
       <!-- end konsultasi bait-->
       <!-- start blogs -->
       <section
-        class="flex flex-col justify-between max-w-[1280px] h-[46rem] m-auto mt-20"
+        class="flex flex-col justify-between max-w-[1280px] m-auto mt-20"
       >
         <h1 class="w-full font-poppins font-medium text-[2rem] m-0">
           Blog Terbaru
         </h1>
         <div
-          class="w-full h-[90%] flex flex-wrap align-bottom justify-between"
+          class="mt-8 w-full h-[90%] flex flex-wrap justify-center gap-2"
           x-data="kategorilow"
         >
           <template x-for="(item, index) in blog">
             <div
-              class="cursor-pointer group overflow-hidden rounded-lg py-5 px-5 relative w-[635px] h-[20rem] bg-[#ffffff] text-white"
+              class="cursor-pointer group overflow-hidden rounded-lg py-5 px-5 relative w-[635px] h-[20rem] text-white"
+              :style="{
+                backgroundImage: `url(aset/${item.img})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }"
             >
-              <img
-                class="absolute top-[-5rem] left-0 group-hover:scale-105 transition duration-300"
-                :src="`aset/${item.img}`"
-                alt=""
-              />
-
               <div
                 class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#00000091] to-transparent"
               ></div>
@@ -1002,14 +1012,14 @@
                 class="flex w-[37rem] items-center justify-between absolute bottom-5"
               >
                 <p
-                  class="font-poppins text-2xl w-[70%] font-medium"
+                  class="font-poppins text-2xl max-w-[70%] font-medium"
                   x-text="item.title"
                 >
                   Membangun Karir Tanpa Batas: Tips untuk Penyandang Disabilitas
                   Memulai di Dunia Kerja
                 </p>
                 <button
-                  class="flex justify-center items-center size-16 rounded-full bg-white hover:bg-gray-300"
+                  class="hidden md:flex justify-center items-center size-16 rounded-full bg-white hover:bg-gray-300"
                 >
                   <svg
                     fill="#000000"
@@ -1069,14 +1079,22 @@
     <!-- start Hero CTA -->
 
     <footer
-      class="text-white font-poppins h-[30rem] w-full flex flex-col justify-center items-center bg-[#030f0f] mt-[8rem]"
+      class="text-white font-poppins lg:h-[30rem] h-[26rem] w-full flex flex-col justify-center items-center bg-[#010505] mt-[8rem]"
     >
-      <div class="max-w-[1280px] bg flex justify-between">
-        <div class="py-[3rem] h-full w-[28%] flex flex-col justify-between">
-          <h1 class="text-[2.5rem] font-[500] font-poppins text-teal-700">
+      <div
+        class="w-[80vw] bg flex flex-col h-[90%] lg:flex-row justify-between"
+      >
+        <div
+          class="py-[3rem] h-full w-full lg:w-[28%] flex flex-col justify-between"
+        >
+          <h1
+            class="text-[1.5rem] lg:text-[2.5rem] font-[500] font-poppins text-teal-700"
+          >
             Liveup
           </h1>
-          <p class="font-poppins font-light w-[80%] text-[#ffffffea]">
+          <p
+            class="text-[1rem] font-poppins font-light lg:w-[80%] w-full text-[#ffffffea]"
+          >
             Jl. Poras No.07, RT.01/RW.04, Loji, Kec. Bogor Bar., Kota Bogor,
             Jawa Barat 16117
           </p>
@@ -1127,8 +1145,6 @@
             <div
               class="size-10 rounded-full border border-[#ffffffe0] flex justify-center items-center"
             >
-              <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-              <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
               <svg
                 class="size-6"
                 viewBox="0 -0.5 25 25"
@@ -1208,10 +1224,10 @@
           </div>
         </div>
         <div
-          class="py-[3rem] text-right h-full w-[20%] flex flex-col gap-[2rem]"
+          class="py-[3rem] text-right h-full w-full lg:w-[20%] flex flex-col gap-[2rem] lg:block hidden"
         >
           <p class="w-full">Resources</p>
-          <ul class="w-full font-light space-y-3">
+          <ul class="w-full space-y-3">
             <li>Bantuan</li>
             <li>Riview Liveup</li>
             <li>Blog</li>
@@ -1223,7 +1239,7 @@
         </div>
       </div>
       <div
-        class="max-w-[1280px] flex justify-center items-center font-light text-[0.9rem] py-4 border-t-[1px] border-white"
+        class="w-[80vw] flex justify-center items-center font-light text-center text-[0.9rem] py-4 border-t-[1px] border-white"
       >
         Copyrights © 2025, SMK Informatika Pesat. All rights Reserved
       </div>
