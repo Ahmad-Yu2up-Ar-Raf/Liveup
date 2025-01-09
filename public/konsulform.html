@@ -226,13 +226,14 @@
     <div class="w-[85%] m-auto">
       <!-- Start timeline -->
       <div
-        class="font-poppins flex items-center gap-8 justify-center m-auto max-w-[40rem] flex-col h-[12rem] bg-gray-100"
+        class="font-poppins flex items-center gap-8 justify-center m-auto max-w-[50rem] flex-col h-[12rem] bg-gray-100"
       >
         <h1 class="font-medium text-[1.5rem]">Pendaftaran Konsultasi</h1>
         <div class="flex w-full items-center justify-center">
+          <!-- Step 1 -->
           <div
-            id="step-1"
-            class="relative size-7 rounded-full bg-teal-400 flex items-center text-white justify-center"
+            id="step-indicator-1"
+            class="step-indicator relative size-7 rounded-full bg-teal-400 flex items-center text-white justify-center"
           >
             1
             <p
@@ -241,28 +242,48 @@
               Paket
             </p>
           </div>
-          <hr id="hr-1" class="bg-gray-300 w-[40%] h-[4px]" />
+          <hr id="hr-1" class="step-hr bg-gray-300 w-[30%] h-[4px]" />
+          <!-- Step 2 -->
           <div
-            id="step-2"
-            class="relative size-7 rounded-full bg-gray-300 flex items-center text-gray-500 justify-center"
+            id="step-indicator-2"
+            class="step-indicator relative size-7 rounded-full bg-gray-300 flex items-center text-gray-500 justify-center"
           >
             2
-            <p class="absolute -bottom-8 text-[0.7rem] lg:text-[0.9rem]">
+            <p
+              class="absolute -bottom-8 text-[0.7rem] lg:text-[0.9rem] text-gray-500"
+            >
               Profil
             </p>
           </div>
-          <hr id="hr-2" class="bg-gray-300 w-[40%] h-[4px]" />
+          <hr id="hr-2" class="step-hr bg-gray-300 w-[30%] h-[4px]" />
+          <!-- Step 3 -->
           <div
-            id="step-3"
-            class="relative size-7 rounded-full bg-gray-300 flex items-center text-gray-500 justify-center"
+            id="step-indicator-3"
+            class="step-indicator relative size-7 rounded-full bg-gray-300 flex items-center text-gray-500 justify-center"
           >
             3
-            <p class="absolute -bottom-8 text-[0.7rem] lg:text-[0.9rem]">
+            <p
+              class="absolute -bottom-8 text-[0.7rem] lg:text-[0.9rem] text-gray-500"
+            >
               Pembayaran
+            </p>
+          </div>
+          <hr id="hr-3" class="step-hr bg-gray-300 w-[30%] h-[4px]" />
+          <!-- Step 4 -->
+          <div
+            id="step-indicator-4"
+            class="step-indicator relative size-7 rounded-full bg-gray-300 flex items-center text-gray-500 justify-center"
+          >
+            4
+            <p
+              class="absolute -bottom-8 text-[0.7rem] lg:text-[0.9rem] text-gray-500"
+            >
+              Konseling
             </p>
           </div>
         </div>
       </div>
+
       <!-- End timeline -->
       <!-- Start Package -->
       <section
@@ -929,18 +950,127 @@
       <!-- Start Bayar -->
       <section
         id="section-3"
-        class="hidden font-poppins max-w-[1280px] m-auto h-[20rem] flex flex-col"
+        class="font-poppins max-w-[1280px] m-auto flex flex-col"
       >
-        <h1
-          class="w-full text-center bg-slate-300 items-center font-medium text-[2rem] font-poppins"
-        >
-          Baayar
-        </h1>
-        <div class="w-full mt-5 h-[7rem] flex justify-between items-start">
-          <button class="text-gray-500">Kembali</button>
+        <div class="w-full mt-10 h-[25rem] flex flex-col gap-3 font-poppins">
+          <h4 class="font-medium text-[1.2rem]">Lakukan Pembayaran</h4>
+          <div class="flex flex-col w-full h-[6rem">
+            <p
+              id="discPrice"
+              class="font-normal text-[1.3rem] text-gray-500 line-through"
+            ></p>
+            <div class="flex items-center gap-3">
+              <h2 id="finalPrice" class="m-0 font-semibold text-[2.5rem]"></h2>
+              <svg
+                viewBox="0 0 24 24"
+                class="hidden size-12"
+                id="bayarCheckmark"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM16.0303 8.96967C16.3232 9.26256 16.3232 9.73744 16.0303 10.0303L11.0303 15.0303C10.7374 15.3232 10.2626 15.3232 9.96967 15.0303L7.96967 13.0303C7.67678 12.7374 7.67678 12.2626 7.96967 11.9697C8.26256 11.6768 8.73744 11.6768 9.03033 11.9697L10.5 13.4393L12.7348 11.2045L14.9697 8.96967C15.2626 8.67678 15.7374 8.67678 16.0303 8.96967Z"
+                    fill="#62d232"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div
+            id="creds"
+            class="flex flex-col w-full border-t-2 border-b-2 border-gray-500 py-4"
+          >
+            <div class="w-full h-8 flex">
+              <p class="font-medium w-[7rem]">Nama :</p>
+              <p
+                class=""
+                x-text="document.getElementById('nama-lengkap').value"
+              ></p>
+            </div>
+            <div class="w-full h-8 flex">
+              <p class="font-medium w-[7rem]">Kelamin :</p>
+              <p
+                class=""
+                x-text="document.getElementById('jenis-kelamin').value"
+              ></p>
+            </div>
+            <div class="w-full h-8 flex">
+              <p class="font-medium w-[7rem]">No HP :</p>
+              <p
+                class=""
+                x-text="document.getElementById('whatsapp').value"
+              ></p>
+            </div>
+            <div class="w-full h-8 flex">
+              <p class="font-medium w-[7rem]">Email :</p>
+              <p class="" x-text="document.getElementById('email').value"></p>
+            </div>
+            <div class="w-full h-8 flex">
+              <p class="font-medium w-[7rem]">Paket :</p>
+              <p id="paketvalue"></p>
+            </div>
+          </div>
+          <p class="text-gray-500">
+            Transfer sejumlah nominal ke nomor rek
+            <span class="font-semibold">BRI</span> dibawah
+          </p>
           <button
-            id="konsulSubmit"
-            class="hover:cursor-not-allowed font-medium group flex items-center justify-center gap-2 p-4 w-[10rem] rounded-lg bg-gray-300 text-gray-500"
+            id="bayarButton"
+            onclick="bayarr()"
+            class="flex gap-2 items-center"
+          >
+            <svg
+              viewBox="0 -0.5 25 25"
+              class="size-8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M17.676 14.248C17.676 15.8651 16.3651 17.176 14.748 17.176H7.428C5.81091 17.176 4.5 15.8651 4.5 14.248V6.928C4.5 5.31091 5.81091 4 7.428 4H14.748C16.3651 4 17.676 5.31091 17.676 6.928V14.248Z"
+                  stroke="#000000"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M10.252 20H17.572C19.1891 20 20.5 18.689 20.5 17.072V9.75195"
+                  stroke="#000000"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+            <p class="font-semibold text-[1.5rem] text-gray-900">
+              9000 1234 5678 901 <span class="font-bold">BRI</span>
+            </p>
+          </button>
+        </div>
+
+        <div class="w-full mt-24 h-[7rem] flex justify-between items-start">
+          <button class="text-gray-500" onclick="prevStep()">Kembali</button>
+          <button
+            id="konsulSubmit3"
+            onclick="nextStep()"
+            class="hover:cursor-not-allowed font-medium group flex items-center justify-center gap-2 p-4 w-[10rem] rounded-lg bg-gray-300 text-gray-400"
           >
             Lanjut
             <svg
@@ -959,6 +1089,111 @@
         </div>
       </section>
       <!-- End Bayar -->
+
+      <!-- Start Selesai -->
+      <section
+        id="section-4"
+        class="hidden mt-11 font-poppins max-w-[1280px] m-auto flex flex-col"
+      >
+        <div class="w-full lg:w-[50rem]">
+          <div id="voicecall" class="hidden w-full h-[25rem]">
+            <div class="flex flex-col gap-3">
+              <h1 class="w-[90%] font-medium text-[2rem]">
+                Kamu sudah <span class="font-semibold">terdaftar!</span> mulai
+                sesi konseling lewat
+                <span class="font-semibold text-[#28d464]">WhatsApp</span>
+              </h1>
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=62823229911"
+                class="flex justify-center items-center font-medium text-white p-4 w-[10rem] rounded-lg bg-[#22b856]"
+              >
+                Mulai
+              </a>
+              <p class="text-gray-500">
+                Tidak ingin sekarang? kami sudah
+                <span class="font-semibold">mengirim link</span> konseling ke
+                emailmu, kamu dapat melakukan sesi konselingmu kapanpun sampai 5
+                hari kedepan,
+              </p>
+              <div class="">
+                <p class="text-gray-500">
+                  <span class="font-medium">Kode Sesi :</span> AS98572887
+                </p>
+                <p class="text-gray-500">
+                  <span class="font-medium">CS :</span> +6282322991172
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="videocall" class="hidden w-full h-[25rem]">
+            <div class="flex flex-col gap-3">
+              <h1 class="w-[90%] font-medium text-[2rem]">
+                Kamu sudah <span class="font-semibold">terdaftar!</span> mulai
+                sesi konseling lewat
+                <span class="font-semibold text-[#146de8]">Zoom</span>
+              </h1>
+              <a
+                target="_blank"
+                href="https://us05web.zoom.us/j/81358014777?pwd=H3cjAOLMaHD501OKYRHjgfcdbZ6YbG.1"
+                class="flex justify-center items-center font-medium text-white p-4 w-[10rem] rounded-lg bg-[#146de8]"
+              >
+                Mulai
+              </a>
+              <p class="text-gray-500">
+                Tidak ingin sekarang? kami sudah
+                <span class="font-semibold">mengirim link dan password</span>
+                konseling ke emailmu, kamu dapat melakukan sesi konselingmu
+                kapanpun sampai 5 hari kedepan,
+              </p>
+              <div class="">
+                <p class="text-gray-500">
+                  <span class="font-medium">Kode Sesi :</span> AS98572887
+                </p>
+                <p class="text-gray-500">
+                  <span class="font-medium">CS :</span> +6282322991172
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="bertemu" class="hidden w-full h-[25rem]">
+            <div class="flex flex-col gap-3">
+              <h1 class="w-[90%] font-medium text-[2rem]">
+                Kamu sudah <span class="font-semibold">terdaftar!</span> datang
+                ke alamat dibawah untuk mulai sesi konseling
+                <span class="font-semibold text-teal-500">Tatap Wajah</span>
+              </h1>
+              <a
+                target="_blank"
+                href="https://maps.app.goo.gl/9wZvryvN4t84NAzr6"
+                class="flex justify-center items-center font-medium text-white p-4 w-[10rem] rounded-lg bg-teal-500"
+              >
+                Lihat alamat
+              </a>
+              <p class="text-gray-500">
+                Kami buka <span class="font-semibold">setiap hari</span> dari
+                <span class="font-semibold">10:00 - 22:00</span>
+              </p>
+              <p class="text-gray-500">
+                Tidak ingin sekarang? kami sudah
+                <span class="font-semibold">mengirim alamat</span> kami ke
+                emailmu, kamu dapat datang melakukan sesi konselingmu kapanpun
+                sampai 5 hari kedepan
+              </p>
+
+              <div class="">
+                <p class="text-gray-500">
+                  <span class="font-medium">Kode Sesi :</span> AS98572887
+                </p>
+                <p class="text-gray-500">
+                  <span class="font-medium">CS :</span> +6282322991172
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Selesai -->
     </div>
 
     <!-- Start Footer -->
@@ -1134,6 +1369,87 @@
     var SelectedPackage = 0;
     var KonsulStep = 1;
     var formFilled = false;
+    var dibayar = false;
+
+    function loadPayment() {
+      var final = document.getElementById("finalPrice");
+      var disc = document.getElementById("discPrice");
+      var divs = document.getElementById("creds");
+      divs.innerHTML = divs.innerHTML;
+
+      if (SelectedPackage === 1) {
+        document.getElementById("paketvalue").textContent =
+          "Voice Call / 60mnt";
+        final.textContent = "Rp 255.000";
+        disc.textContent = "Rp 400.000";
+      }
+
+      if (SelectedPackage === 2) {
+        final.textContent = "Rp 309.000";
+        disc.textContent = "Rp 450.000";
+        document.getElementById("paketvalue").textContent =
+          "Video Call / 60mnt";
+      }
+
+      if (SelectedPackage === 3) {
+        document.getElementById("paketvalue").textContent =
+          "Tatap Muka / 50mnt";
+        final.textContent = "Rp 814.000";
+        disc.textContent = "Rp 910.000";
+      }
+    }
+
+    function bayarr() {
+      var aa = document.getElementById("bayarButton");
+      var ic = document.getElementById("bayarCheckmark");
+      var xx = document.getElementById("konsulSubmit3");
+
+      ic.classList.remove("hidden");
+      xx.classList.remove("bg-gray-300");
+      xx.classList.remove("text-gray-500");
+      xx.classList.add("bg-teal-500");
+      xx.classList.add("text-teal-950");
+      xx.classList.remove("hover:cursor-not-allowed");
+
+      dibayar = true;
+    }
+
+    function resetKonsulBar() {
+      // Reset semua indikator dan garis
+      for (let i = 1; i <= 3; i++) {
+        const indicator = document.getElementById(`step-indicator-${i}`);
+        const hr = document.getElementById(`hr-${i - 1}`);
+
+        if (indicator) {
+          indicator.classList.remove("bg-teal-400", "text-white");
+          indicator.classList.add("bg-gray-300", "text-gray-500");
+        }
+
+        if (hr) {
+          hr.classList.remove("bg-teal-400");
+          hr.classList.add("bg-gray-300");
+        }
+      }
+    }
+
+    function konsulBar(stepx) {
+      resetKonsulBar();
+
+      for (let i = 1; i <= stepx; i++) {
+        const indicator = document.getElementById(`step-indicator-${i}`);
+        const hr = document.getElementById(`hr-${i - 1}`);
+
+        if (indicator) {
+          indicator.classList.add("bg-teal-400", "text-white");
+          indicator.classList.remove("bg-gray-300", "text-gray-500");
+        }
+
+        if (hr) {
+          hr.classList.add("bg-teal-400");
+          hr.classList.remove("bg-gray-300");
+        }
+      }
+    }
 
     document.addEventListener("DOMContentLoaded", function () {
       const requiredFields = [
@@ -1196,8 +1512,8 @@
 
     function showStep(stepx) {
       KonsulStep = stepx;
+      konsulBar(stepx);
       var sectionx = document.getElementById(`section-${stepx}`);
-
       for (let i = 1; i <= 3; i++) {
         var pp = document.getElementById(`section-${i}`);
         pp.classList.remove("block");
@@ -1207,6 +1523,9 @@
       }
       sectionx.classList.remove("hidden");
       sectionx.classList.add("block");
+
+      if (stepx === 1) {
+      }
     }
 
     function prevStep() {
@@ -1235,19 +1554,41 @@
       if (stepx === 2) {
         if (formFilled === true) {
           ablex = true;
+          loadPayment();
+        }
+      }
+
+      if (stepx === 3) {
+        if (dibayar === true) {
+          ablex = true;
+          if (SelectedPackage === 1) {
+            document.getElementById("voicecall").classList.remove("hidden");
+          }
+
+          if (SelectedPackage === 2) {
+            document.getElementById("videocall").classList.remove("hidden");
+          }
+
+          if (SelectedPackage === 3) {
+            document.getElementById("bertemu").classList.remove("hidden");
+          }
         }
       }
 
       if (ablex === true) {
         KonsulStep = stepx + 1;
         showStep(KonsulStep);
-        console.log(KonsulStep);
       }
     }
 
     function selectPackage(paket) {
       for (let i = 1; i <= 3; i++) {
-        document.getElementById(`paket-${i}-btn`).textContent = "PILIH";
+        var vv = document.getElementById(`paket-${i}-btn`);
+        vv.textContent = "PILIH";
+        vv.classList.add("bg-teal-500");
+        vv.classList.add("text-teal-950");
+        vv.classList.remove("bg-yellow-500");
+        vv.classList.remove("text-white");
         const pp = document.getElementById(`paket-${i}`);
         if (pp.classList.contains("border-gray-800")) {
           pp.classList.add("border-gray-400");
@@ -1255,7 +1596,12 @@
         pp.classList.remove("border-gray-800");
       }
       if (paket !== SelectedPackage) {
-        document.getElementById(`paket-${paket}-btn`).textContent = "BATALKAN";
+        var vv = document.getElementById(`paket-${paket}-btn`);
+        vv.textContent = "BATALKAN";
+        vv.classList.remove("bg-teal-500");
+        vv.classList.remove("text-teal-950");
+        vv.classList.add("bg-yellow-500");
+        vv.classList.add("text-white");
         document
           .getElementById(`paket-${paket}`)
           .classList.remove("border-gray-400");
