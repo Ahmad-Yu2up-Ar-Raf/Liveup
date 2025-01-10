@@ -286,9 +286,8 @@
         x-data="perusahaan"
         class="font-montserrat text-black max-w-[1280px] justify-center flex flex-wrap gap-3 m-auto mt-8"
       >
-        <template
-          x-for="(item, index) in [...Array(15)].map(() => items[Math.floor(Math.random() * items.length)])"
-          :key="index"
+        <!-- x-for="(item, index) in [...Array(7)].map(() => items[Math.floor(Math.random() * items.length)])" -->
+        <template x-for="(item, index) in items" :key="index"
           ><div
             class="p-3 w-[32.5%] h-[13rem] flex flex-col justify-between border bg-white border-gray-400 hover:border-gray-500 cursor-pointer rounded-lg"
           >
