@@ -223,10 +223,11 @@
     </header>
     <!-- End Nav -->
 
-    <div class="font-poppins text-white w-[95%] m-auto">
+    <!-- Start FInd -->
+    <div id="findsx" class="hidden font-poppins text-white w-[95%] m-auto">
       <!-- Start Search card -->
       <section
-        class="flex justify-center flex-col gap-4 items-center w-full lg:max-w-[1280px] h-[30rem] bg-[#005D5F] m-auto rounded-xl mt-4"
+        class="flex justify-center flex-col gap-4 items-center w-full lg:max-w-[1280px] lg:h-[30rem] h-[25rem] bg-[#005D5F] m-auto rounded-xl mt-4"
         style="
           background-image: linear-gradient(to top, #005e5fd2 99%, #005e5fd2 1%),
             url(aset/perusahaan.jpg);
@@ -239,7 +240,7 @@
         </h1>
 
         <div
-          class="flex items-center justify-between rounded-lg w-[50%] bg-white px-1 py-1 pr-4"
+          class="flex items-center justify-between rounded-lg w-[80%] lg:w-[50%] bg-white px-1 py-1 pr-4"
         >
           <input
             class="text-gray-800 rounded-lg outin focus:outline-none focus:ring-0 border-none w-[93%] bg-transparent"
@@ -267,11 +268,11 @@
 
         <div
           x-data="{ items: ['Telkomsel', 'Indofood', 'Luna Host', 'POC Tech', 'Suzuki'] }"
-          class="w-[50%] justify flex justify-between flex-wrap gap-2"
+          class="w-[80%] lg:w-[50%] justify flex justify-center flex-wrap gap-2"
         >
           <template x-for="item in items"
             ><h3
-              class="bg-[#ffffff65] h-8 flex justify-center items-center px-6 p-4 rounded-sm"
+              class="bg-[#ffffff65] h-8 flex text-[0.8rem] lg:text-[1rem] justify-center items-center px-6 p-4 rounded-sm"
               x-text="item"
             >
               Indofood
@@ -286,10 +287,10 @@
         x-data="perusahaan"
         class="font-montserrat text-black max-w-[1280px] justify-center flex flex-wrap gap-3 m-auto mt-8"
       >
-        <!-- x-for="(item, index) in [...Array(7)].map(() => items[Math.floor(Math.random() * items.length)])" -->
+        <!-- x-for="(item, index) in [...Array(9)].map(() => items[Math.floor(Math.random() * items.length)])" -->
         <template x-for="(item, index) in items" :key="index"
           ><div
-            class="p-3 w-[32.5%] h-[13rem] flex flex-col justify-between border bg-white border-gray-400 hover:border-gray-500 cursor-pointer rounded-lg"
+            class="group p-3 w-[46%] md:w-[49%] lg:w-[32.5%] min-h-[13rem] flex flex-col justify-between hover:shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)] border bg-white border-gray-400 hover:border-gray-500 cursor-pointer rounded-lg"
           >
             <div class="items-center gap-6 flex w-full">
               <img
@@ -298,7 +299,10 @@
                 alt="..."
               />
               <div class="flex gap-2 flex-col h-full justify-between">
-                <h1 class="font-medium text-[1.1rem]" x-text="item.nama">
+                <h1
+                  class="group-hover:text-teal-700 font-medium text-[1.1rem]"
+                  x-text="item.nama"
+                >
                   PT Indofood Sukses Makmur Tbk.
                 </h1>
                 <p class="text-gray-500 text-[0.8rem]" x-text="item.alamat">
@@ -370,6 +374,548 @@
       </section>
       <!-- EndComp -->
     </div>
+    <!-- EndFInd -->
+
+    <!-- Start View -->
+    <div id="viewx" class="font-poppins text-white w-[95%] m-auto">
+      <!-- start Banner -->
+      <section
+        class="relative flex justify-center flex-col gap-4 items-center w-full lg:max-w-[1360px] h-[18rem] bg-[#005D5F] m-auto rounded-xl mt-4"
+        style="
+          background-image: url(aset/detail-perusahana/indofood.jpg);
+          background-size: cover;
+          background-position: 50%;
+        "
+      >
+        <img
+          src="aset/perusahaan/indofood.png"
+          alt="..."
+          class="bg-white absolute -bottom-12 left-10 rounded-full size-32 p-1 shadow-[7px_6px_6px_0px_rgba(0,_0,_0,_0.1)]"
+        />
+      </section>
+      <!-- end Banner -->
+
+      <!-- Start Title -->
+      <section class="mt-[4.5rem] m-auto max-w-[1280px]">
+        <div class="font-poppins text-black flex w-full flex-col gap-1">
+          <h1 class="m-0 font-semibold text-[1.5rem]">
+            PT Indofood Sukses Makmur Tbk.
+          </h1>
+          <h2 class="m-0 font-medium text-[1.1rem]">Food And Beverage</h2>
+          <h3 class="m-0 text-gray-400">
+            Jakarta Pusat, DKI Jakarta, Indonesia
+          </h3>
+          <div class="mt-1 flex gap-3">
+            <div class="flex gap-1" x-data="">
+              <template x-for="i in 5">
+                <svg
+                  version="1.0"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  class="size-5"
+                  viewBox="0 0 64 64"
+                  enable-background="new 0 0 64 64"
+                  xml:space="preserve"
+                >
+                  <path
+                    class="fill-[#E36945]"
+                    d="M62.799,23.737c-0.47-1.399-1.681-2.419-3.139-2.642l-16.969-2.593L35.069,2.265
+      C34.419,0.881,33.03,0,31.504,0c-1.527,0-2.915,0.881-3.565,2.265l-7.623,16.238L3.347,21.096c-1.458,0.223-2.669,1.242-3.138,2.642
+      c-0.469,1.4-0.115,2.942,0.916,4l12.392,12.707l-2.935,17.977c-0.242,1.488,0.389,2.984,1.62,3.854
+      c1.23,0.87,2.854,0.958,4.177,0.228l15.126-8.365l15.126,8.365c0.597,0.33,1.254,0.492,1.908,0.492c0.796,0,1.592-0.242,2.269-0.72
+      c1.231-0.869,1.861-2.365,1.619-3.854l-2.935-17.977l12.393-12.707C62.914,26.68,63.268,25.138,62.799,23.737z"
+                  />
+                </svg>
+              </template>
+            </div>
+            <h1>
+              4.3 dari
+              <span class="hover:cursor-pointer font-semibold underline"
+                >11 Ulasan</span
+              >
+            </h1>
+          </div>
+        </div>
+      </section>
+      <!-- End Title -->
+
+      <!-- Start Deskripsi -->
+      <section
+        class="font-poppins text-black mt-[4.5rem] m-auto max-w-[1280px] flex justify-between"
+      >
+        <!-- Start about -->
+        <div
+          class="p-4 flex flex-col h-[50rem] gap-4 w-[69%] border rounded-lg border-gray-300"
+        >
+          <h1 class="font-medium text-[1.2rem]">Tentang Perusahaan</h1>
+          <div class="flex-col gap-1">
+            <div class="font-poppins flex">
+              <h1 class="font-medium w-[29%]">Industri</h1>
+              <p class="">Food And Beverage</p>
+            </div>
+            <div class="font-poppins flex">
+              <h1 class="font-medium w-[29%]">Ukuran Perusahaan</h1>
+              <p class="">1000 - 5000 Karyawan</p>
+            </div>
+          </div>
+          <hr class="bg-slate-300" />
+          <p
+            class="overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 h-[90%]"
+          >
+            Kami Indofood adalah Perusahaan Makanan dan Minuman Terkemuka.<br /><br />
+            Indofood berkomitmen untuk menyediakan produk makanan dan minuman
+            berkualitas tinggi ke setiap sudut Indonesia dan memiliki visi untuk
+            menjadi merek yang dipercaya dan dicintai oleh masyarakat
+            Indonesia.<br /><br />
+            <strong>Bisnis Kami</strong><br />
+            Kami memberi asupan berkualitas untuk Indonesia<br />
+            Indofood dikenal sebagai salah satu perusahaan makanan terbesar di
+            Indonesia, dengan portofolio produk yang luas mulai dari mi instan,
+            produk susu, makanan ringan, bumbu masak, hingga produk nutrisi dan
+            makanan khusus.<br /><br />
+            Kami terus berinovasi untuk memenuhi beragam selera dan kebutuhan
+            keluarga Indonesia. Berdasarkan model bisnis terpadu, kami
+            memastikan setiap tahap produksi—dari pengadaan bahan baku hingga
+            distribusi—ditangani dengan cermat dan presisi. Indofood juga aktif
+            memperluas jangkauan globalnya dengan mengekspor merek unggulan kami
+            ke lebih dari 60 negara di seluruh dunia.<br /><br />
+            <strong>Pencapaian Bisnis Global dan Lokal</strong><br />
+            <em>Keunggulan Diakui di Seluruh Dunia</em><br />
+            Merek-merek kami telah menerima berbagai penghargaan atas inovasi,
+            kualitas, dan rasa, mencerminkan komitmen kami untuk selalu
+            memberikan yang terbaik.<br /><br />
+            Indofood telah mendapat pengakuan dari berbagai lembaga
+            internasional dan tetap menjadi pemimpin pasar di segmen mi
+            instan.<br /><br />
+            <em>Pendekatan Lokal untuk Melayani Setiap Wilayah</em><br />
+            Indofood menyesuaikan penawaran produk dan strategi pemasarannya
+            untuk memenuhi preferensi spesifik dari setiap daerah. Strategi
+            lokalisasi ini membantu kami mempertahankan loyalitas merek yang
+            kuat di berbagai komunitas di Indonesia.
+          </p>
+        </div>
+        <!-- End about -->
+
+        <!-- Start Galeri -->
+        <div
+          class="p-4 w-[30%] flex flex-col gap-5 h-[50rem] border rounded-lg border-gray-300"
+        >
+          <h1 class="font-medium text-[1.2rem]">Galeri Perusahaan</h1>
+          <div class="flex flex-col gap-2 w-full">
+            <img
+              src="aset/detail-perusahana/g1.jpg"
+              alt=".."
+              class="object-cover w-full h-[13rem] rounded-lg"
+            />
+            <img
+              src="aset/detail-perusahana/g2.jpg"
+              alt=".."
+              class="object-cover w-full h-[13rem] rounded-lg"
+            />
+            <img
+              src="aset/detail-perusahana/g3.jpg"
+              alt=".."
+              class="object-cover w-full h-[13rem] rounded-lg"
+            />
+            <h1
+              class="mt-5 w-full text-center font-medium hover:cursor-pointer"
+            >
+              Selengkapnya
+            </h1>
+          </div>
+        </div>
+        <!-- End Galeri -->
+      </section>
+      <!-- End Deskripsi -->
+
+      <!-- Start Lowongan -->
+      <section
+        class="min-h-[4rem] font-poppins text-black mt-[2rem] m-auto max-w-[1280px] flex flex-col py-5 justify-between"
+      >
+        <h1 class="font-medium text-[1.2rem]">11 loker tersedia</h1>
+        <div
+          x-data="{
+          jobs: [
+            { 
+              nama: 'Supervisor Produksi', 
+              gaji: 'Rp 5 jt - 8 jt', 
+              posted: '3 hari yang lalu', 
+              pt: 'PT Indofood Sukses Makmur', 
+              alamat: 'Jakarta, DKI Jakarta'
+            },
+            { 
+              nama: 'Staff Keuangan', 
+              gaji: 'Rp 4 jt - 6 jt', 
+              posted: '1 hari yang lalu', 
+              pt: 'PT Indofood CBP Sukses Makmur', 
+              alamat: 'Bandung, Jawa Barat'
+            },
+            { 
+              nama: 'Quality Control Supervisor', 
+              gaji: 'Rp 6 jt - 9 jt', 
+              posted: '5 hari yang lalu', 
+              pt: 'PT Indofood Group', 
+              alamat: 'Medan, Sumatera Utara'
+            },
+            { 
+              nama: 'Marketing Executive', 
+              gaji: 'Rp 7 jt - 10 jt', 
+              posted: '2 hari yang lalu', 
+              pt: 'PT Indofood Sukses Makmur', 
+              alamat: 'Surabaya, Jawa Timur'
+            },
+            { 
+              nama: 'HRD Staff', 
+              gaji: 'Rp 4 jt - 6 jt', 
+              posted: '4 hari yang lalu', 
+              pt: 'PT Indofood CBP Sukses Makmur', 
+              alamat: 'Bekasi, Jawa Barat'
+            },
+            { 
+              nama: 'Logistics Coordinator', 
+              gaji: 'Rp 6 jt - 8 jt', 
+              posted: '6 hari yang lalu', 
+              pt: 'PT Indofood Group', 
+              alamat: 'Yogyakarta, DI Yogyakarta'
+            }
+          ]
+        }"
+          class="w-full mt-2 h-[16rem] flex overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 gap-2"
+        >
+          <template x-for="item in jobs">
+            <div
+              class="min-w-[25rem] h-[13rem] p-4 bg-white border border-gray-200 rounded-lg shadow-md"
+            >
+              <div class="flex w-full justify-between">
+                <h3
+                  x-text="item.nama"
+                  class="text-lg font-semibold text-gray-800"
+                >
+                  Pengajar Bahasa Indonesia
+                </h3>
+                <p class="text-blue-500 font-bold" x-text="item.gaji">
+                  Rp 2 jt-3 jt
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-2 my-3">
+                <span
+                  class="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full"
+                  >Kerja di kantor</span
+                >
+                <span
+                  class="bg-gray-100 text-gray-600 text-sm px-3 py-1 rounded-full"
+                  >Penuh Waktu</span
+                >
+              </div>
+              <div class="border-b border-gray-300 py-2 flex items-center mt-3">
+                <img
+                  class="w-8 h-8 rounded-full"
+                  src="https://via.placeholder.com/32"
+                  alt="Logo Yayasan"
+                />
+                <div class="ml-3">
+                  <p x-text="item.pt" class="text-sm font-medium text-gray-800">
+                    Yayasan Mardi Waluyo Sukabumi
+                  </p>
+                  <p x-text="item.alamat" class="text-sm text-gray-600">
+                    Cikole, Sukabumi, Jawa Barat
+                  </p>
+                </div>
+              </div>
+              <p x-text="item.posted" class="text-sm text-gray-500 mt-3">
+                7 hari yang lalu
+              </p>
+            </div>
+          </template>
+        </div>
+      </section>
+      <!-- End Lowongan -->
+
+      <!-- Start rating -->
+      <section
+        class="font-poppins text-black mt-[4.5rem] m-auto max-w-[1280px] flex justify-between"
+      >
+        <!-- Start Rating -->
+        <section class="py-24 relative">
+          <div class="w-full max-w-7xl px-4 md:px-5 lg:px-6 mx-auto">
+            <div class="">
+              <div class="grid grid-cols-12 mb-11">
+                <div class="col-span-12 xl:col-span-4 flex items-center">
+                  <div
+                    class="box flex flex-col gap-y-4 w-full max-xl:max-w-3xl mx-auto"
+                  >
+                    <div class="flex items-center w-full">
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        5
+                      </p>
+
+                      <p
+                        class="h-2 w-full sm:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3"
+                      >
+                        <span
+                          class="h-full w-[30%] rounded-[30px] bg-[#E36945] flex"
+                        ></span>
+                      </p>
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        30
+                      </p>
+                    </div>
+                    <div class="flex items-center w-full">
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        4
+                      </p>
+
+                      <p
+                        class="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3"
+                      >
+                        <span
+                          class="h-full w-[40%] rounded-[30px] bg-[#E36945] flex"
+                        ></span>
+                      </p>
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        40
+                      </p>
+                    </div>
+                    <div class="flex items-center">
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        3
+                      </p>
+
+                      <p
+                        class="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3"
+                      >
+                        <span
+                          class="h-full w-[20%] rounded-[30px] bg-[#E36945] flex"
+                        ></span>
+                      </p>
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        20
+                      </p>
+                    </div>
+                    <div class="flex items-center">
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        2
+                      </p>
+
+                      <p
+                        class="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3"
+                      >
+                        <span
+                          class="h-full w-[16%] rounded-[30px] bg-[#E36945] flex"
+                        ></span>
+                      </p>
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        16
+                      </p>
+                    </div>
+                    <div class="flex items-center">
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        1
+                      </p>
+
+                      <p
+                        class="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3"
+                      >
+                        <span
+                          class="h-full w-[8%] rounded-[30px] bg-[#E36945] flex"
+                        ></span>
+                      </p>
+                      <p
+                        class="font-medium text-lg py-[1px] text-black mr-[2px]"
+                      >
+                        8
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-span-12 max-xl:mt-8 xl:col-span-8 xl:pl-8 w-full min-h-[230px]"
+                >
+                  <div
+                    class="grid grid-cols-12 h-full px-8 max-lg:py-8 rounded-3xl bg-gray-100 w-full max-xl:max-w-3xl max-xl:mx-auto"
+                  >
+                    <div class="col-span-12 md:col-span-8 flex items-center">
+                      <div
+                        class="flex flex-col sm:flex-row items-center max-lg:justify-center w-full h-full"
+                      >
+                        <div
+                          class="sm:pr-3 sm:border-r border-gray-200 flex items-center justify-center flex-col"
+                        >
+                          <h2
+                            class="font-poppins font-bold text-5xl text-black text-center mb-4"
+                          >
+                            4.3
+                          </h2>
+                          <div x-data class="flex items-center gap-3 mb-4">
+                            <template x-for="i in 5">
+                              <svg
+                                version="1.0"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                class="size-5"
+                                viewBox="0 0 64 64"
+                                enable-background="new 0 0 64 64"
+                                xml:space="preserve"
+                              >
+                                <path
+                                  class="fill-[#E36945]"
+                                  d="M62.799,23.737c-0.47-1.399-1.681-2.419-3.139-2.642l-16.969-2.593L35.069,2.265
+      C34.419,0.881,33.03,0,31.504,0c-1.527,0-2.915,0.881-3.565,2.265l-7.623,16.238L3.347,21.096c-1.458,0.223-2.669,1.242-3.138,2.642
+      c-0.469,1.4-0.115,2.942,0.916,4l12.392,12.707l-2.935,17.977c-0.242,1.488,0.389,2.984,1.62,3.854
+      c1.23,0.87,2.854,0.958,4.177,0.228l15.126-8.365l15.126,8.365c0.597,0.33,1.254,0.492,1.908,0.492c0.796,0,1.592-0.242,2.269-0.72
+      c1.231-0.869,1.861-2.365,1.619-3.854l-2.935-17.977l12.393-12.707C62.914,26.68,63.268,25.138,62.799,23.737z"
+                                />
+                              </svg>
+                            </template>
+                          </div>
+                          <p
+                            class="font-normal text-lg leading-8 text-gray-400"
+                          >
+                            11 Ratings
+                          </p>
+                        </div>
+
+                        <div
+                          class="sm:pl-3 sm:border-l border-gray-200 flex items-center justify-center flex-col"
+                        >
+                          <h2
+                            class="font-poppins font-bold text-5xl text-black text-center mb-4"
+                          >
+                            4.8
+                          </h2>
+                          <div x-data class="flex items-center gap-3 mb-4">
+                            <template x-for="i in 5">
+                              <svg
+                                version="1.0"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                class="size-5"
+                                viewBox="0 0 64 64"
+                                enable-background="new 0 0 64 64"
+                                xml:space="preserve"
+                              >
+                                <path
+                                  class="fill-[#E36945]"
+                                  d="M62.799,23.737c-0.47-1.399-1.681-2.419-3.139-2.642l-16.969-2.593L35.069,2.265
+      C34.419,0.881,33.03,0,31.504,0c-1.527,0-2.915,0.881-3.565,2.265l-7.623,16.238L3.347,21.096c-1.458,0.223-2.669,1.242-3.138,2.642
+      c-0.469,1.4-0.115,2.942,0.916,4l12.392,12.707l-2.935,17.977c-0.242,1.488,0.389,2.984,1.62,3.854
+      c1.23,0.87,2.854,0.958,4.177,0.228l15.126-8.365l15.126,8.365c0.597,0.33,1.254,0.492,1.908,0.492c0.796,0,1.592-0.242,2.269-0.72
+      c1.231-0.869,1.861-2.365,1.619-3.854l-2.935-17.977l12.393-12.707C62.914,26.68,63.268,25.138,62.799,23.737z"
+                                />
+                              </svg>
+                            </template>
+                          </div>
+                          <p
+                            class="font-normal text-lg leading-8 text-gray-400"
+                          >
+                            Last Month
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-4 max-lg:mt-8 md:pl-8">
+                      <div
+                        class="flex items-center flex-col justify-center w-full h-full"
+                      >
+                        <button
+                          class="rounded-lg px-6 py-4 bg-teal-600 font-semibold text-lg text-white whitespace-nowrap mb-6 w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-teal-700 hover:shadow-teal-400"
+                        >
+                          Tulis Ulasan
+                        </button>
+                        <button
+                          class="rounded-lg px-6 py-4 bg-white font-semibold text-lg text-teal-600 whitespace-nowrap w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-teal-100 hover:shadow-teal-200"
+                        >
+                          Lihat semua
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pb-8 border-gray-200 max-xl:max-w-3xl max-xl:mx-auto">
+                <h4
+                  class="font-poppins font-semibold text-2xl leading-10 text-black mb-6"
+                >
+                  Ulasan yang membantu
+                </h4>
+                <div
+                  class="flex sm:items-center flex-col sm:flex-row justify-between mb-4"
+                >
+                  <div x-data class="flex items-center gap-3">
+                    <template x-for="i in 5">
+                      <svg
+                        version="1.0"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        class="size-7"
+                        viewBox="0 0 64 64"
+                        enable-background="new 0 0 64 64"
+                        xml:space="preserve"
+                      >
+                        <path
+                          class="fill-[#E36945]"
+                          d="M62.799,23.737c-0.47-1.399-1.681-2.419-3.139-2.642l-16.969-2.593L35.069,2.265
+            C34.419,0.881,33.03,0,31.504,0c-1.527,0-2.915,0.881-3.565,2.265l-7.623,16.238L3.347,21.096c-1.458,0.223-2.669,1.242-3.138,2.642
+            c-0.469,1.4-0.115,2.942,0.916,4l12.392,12.707l-2.935,17.977c-0.242,1.488,0.389,2.984,1.62,3.854
+            c1.23,0.87,2.854,0.958,4.177,0.228l15.126-8.365l15.126,8.365c0.597,0.33,1.254,0.492,1.908,0.492c0.796,0,1.592-0.242,2.269-0.72
+            c1.231-0.869,1.861-2.365,1.619-3.854l-2.935-17.977l12.393-12.707C62.914,26.68,63.268,25.138,62.799,23.737z"
+                        />
+                      </svg>
+                    </template>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <h6 class="font-semibold text-lg leading-8 text-black">
+                      @john.doe
+                    </h6>
+                    <p class="font-medium text-base leading-7 text-gray-400">
+                      Nov 01, 2023
+                    </p>
+                  </div>
+                </div>
+
+                <p class="font-normal text-lg leading-8 text-gray-500">
+                  I recently had the opportunity to explore Pagedone's UI design
+                  system, and it left a lasting impression on my workflow. The
+                  system seamlessly blends user-friendly features with a robust
+                  set of design components, making it a go-to for creating
+                  visually stunning and consistent interfaces.
+                </p>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row items-center justify-between pt-8 max-xl:max-w-3xl max-xl:mx-auto"
+              ></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- End Rating -->
+      </section>
+      <!-- end lowngan & rating -->
+    </div>
+    <!-- EndView -->
+
     <!-- Footer -->
     <footer
       class="text-white font-poppins lg:h-[30rem] h-[26rem] w-full flex flex-col justify-center items-center bg-[#010505] mt-[8rem]"
