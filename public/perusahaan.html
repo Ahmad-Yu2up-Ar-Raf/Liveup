@@ -32,7 +32,8 @@
       data-account="TtT4SkBcgi"
     ></script>
   </head>
-  <body class="bg-gray-100">
+
+  <body x-data="perusahaan" class="bg-gray-100">
     <!-- Start Nav -->
     <header
       class="w-full bg-white border-b-2 z-40 sticky"
@@ -224,7 +225,11 @@
     <!-- End Nav -->
 
     <!-- Start FInd -->
-    <div id="findsx" class="hidden font-poppins text-white w-[95%] m-auto">
+    <div
+      id="findsx"
+      x-show="showfind"
+      class="font-poppins text-white w-[95%] m-auto"
+    >
       <!-- Start Search card -->
       <section
         class="flex justify-center flex-col gap-4 items-center w-full lg:max-w-[1280px] lg:h-[30rem] h-[25rem] bg-[#005D5F] m-auto rounded-xl mt-4"
@@ -284,12 +289,12 @@
 
       <!-- Start Comp -->
       <section
-        x-data="perusahaan"
         class="font-montserrat text-black max-w-[1280px] justify-center flex flex-wrap gap-3 m-auto mt-8"
       >
         <!-- x-for="(item, index) in [...Array(9)].map(() => items[Math.floor(Math.random() * items.length)])" -->
         <template x-for="(item, index) in items" :key="index"
           ><div
+            @click="showview = true; selectedpt = item; showfind = false; scrollToTop()"
             class="group p-3 w-[46%] md:w-[49%] lg:w-[32.5%] min-h-[13rem] flex flex-col justify-between hover:shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)] border bg-white border-gray-400 hover:border-gray-500 cursor-pointer rounded-lg"
           >
             <div class="items-center gap-6 flex w-full">
@@ -305,7 +310,11 @@
                 >
                   PT Indofood Sukses Makmur Tbk.
                 </h1>
-                <p class="text-gray-500 text-[0.8rem]" x-text="item.alamat">
+                <p
+                  x-text="item.alamat"
+                  class="text-gray-500 text-[0.8rem]"
+                  x-text="item.alamat"
+                >
                   Jakarta Pusat, DKI Jakarta, Indonesia
                 </p>
               </div>
@@ -377,18 +386,22 @@
     <!-- EndFInd -->
 
     <!-- Start View -->
-    <div id="viewx" class="font-poppins text-white w-[95%] m-auto">
+    <div
+      id="viewx"
+      x-show="selectedpt"
+      class="font-poppins text-white w-[95%] m-auto"
+    >
       <!-- start Banner -->
       <section
         class="relative flex justify-center flex-col gap-4 items-center w-full lg:max-w-[1360px] h-[18rem] bg-[#005D5F] m-auto rounded-xl mt-4"
-        style="
-          background-image: url(aset/detail-perusahana/indofood.jpg);
-          background-size: cover;
-          background-position: 50%;
-        "
+        :style="{
+          backgroundImage: `url(aset/detail-perusahana/${selectedpt.img})`,
+          backgroundSize: 'cover',
+          backgroundPosition: '50%',
+        }"
       >
         <img
-          src="aset/perusahaan/indofood.png"
+          :src="`aset/perusahaan/${selectedpt.img}`"
           alt="..."
           class="bg-white absolute -bottom-12 left-10 rounded-full size-32 p-1 shadow-[7px_6px_6px_0px_rgba(0,_0,_0,_0.1)]"
         />
@@ -398,11 +411,13 @@
       <!-- Start Title -->
       <section class="mt-[4.5rem] m-auto max-w-[1280px]">
         <div class="font-poppins text-black flex w-full flex-col gap-1">
-          <h1 class="m-0 font-semibold text-[1.5rem]">
+          <h1 x-text="selectedpt.nama" class="m-0 font-semibold text-[1.5rem]">
             PT Indofood Sukses Makmur Tbk.
           </h1>
-          <h2 class="m-0 font-medium text-[1.1rem]">Food And Beverage</h2>
-          <h3 class="m-0 text-gray-400">
+          <h2 x-text="selectedpt.cat" class="m-0 font-medium text-[1.1rem]">
+            Food And Beverage
+          </h2>
+          <h3 x-text="selectedpt.alamat" class="m-0 text-gray-400">
             Jakarta Pusat, DKI Jakarta, Indonesia
           </h3>
           <div class="mt-1 flex gap-3">
@@ -430,10 +445,11 @@
               </template>
             </div>
             <h1>
-              4.3 dari
-              <span class="hover:cursor-pointer font-semibold underline"
-                >11 Ulasan</span
-              >
+              <span x-text="selectedpt.rate"></span> dari
+              <span
+                class="font-medium underline"
+                x-text="selectedpt.ulasan"
+              ></span>
             </h1>
           </div>
         </div>
@@ -442,21 +458,21 @@
 
       <!-- Start Deskripsi -->
       <section
-        class="font-poppins text-black mt-[4.5rem] m-auto max-w-[1280px] flex justify-between"
+        class="font-poppins text-black mt-[4.5rem] m-auto max-w-[1280px] lg:gap-0 gap-4 lg:flex-row flex-col flex justify-between"
       >
         <!-- Start about -->
         <div
-          class="p-4 flex flex-col h-[50rem] gap-4 w-[69%] border rounded-lg border-gray-300"
+          class="p-4 flex flex-col h-[50rem] gap-4 w-full lg:w-[69%] border rounded-lg border-gray-300"
         >
           <h1 class="font-medium text-[1.2rem]">Tentang Perusahaan</h1>
           <div class="flex-col gap-1">
             <div class="font-poppins flex">
               <h1 class="font-medium w-[29%]">Industri</h1>
-              <p class="">Food And Beverage</p>
+              <p x-text="selectedpt.cat" class="">Food And Beverage</p>
             </div>
             <div class="font-poppins flex">
               <h1 class="font-medium w-[29%]">Ukuran Perusahaan</h1>
-              <p class="">1000 - 5000 Karyawan</p>
+              <p x-text="selectedpt.ukuran" class="">1000 - 5000 Karyawan</p>
             </div>
           </div>
           <hr class="bg-slate-300" />
@@ -499,7 +515,7 @@
 
         <!-- Start Galeri -->
         <div
-          class="p-4 w-[30%] flex flex-col gap-5 h-[50rem] border rounded-lg border-gray-300"
+          class="p-4 w-full lg:w-[30%] flex flex-col gap-5 h-[50rem] border rounded-lg border-gray-300"
         >
           <h1 class="font-medium text-[1.2rem]">Galeri Perusahaan</h1>
           <div class="flex flex-col gap-2 w-full">
@@ -531,9 +547,12 @@
 
       <!-- Start Lowongan -->
       <section
-        class="min-h-[4rem] font-poppins text-black mt-[2rem] m-auto max-w-[1280px] flex flex-col py-5 justify-between"
+        class="lg:min-h-[4rem] font-poppins text-black mt-[2rem] m-auto max-w-[1280px] flex flex-col py-5 justify-between"
       >
-        <h1 class="font-medium text-[1.2rem]">11 loker tersedia</h1>
+        <h1
+          class="font-medium text-[1.2rem]"
+          x-text="`${selectedpt.loker} tersedia`"
+        ></h1>
         <div
           x-data="{
           jobs: [
@@ -581,7 +600,7 @@
             }
           ]
         }"
-          class="w-full mt-2 h-[16rem] flex overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 gap-2"
+          class="w-full mt-2 lg:h-[16rem] lg:flex-row flex-col flex lg:overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 gap-2"
         >
           <template x-for="item in jobs">
             <div
@@ -611,11 +630,14 @@
               <div class="border-b border-gray-300 py-2 flex items-center mt-3">
                 <img
                   class="w-8 h-8 rounded-full"
-                  src="https://via.placeholder.com/32"
-                  alt="Logo Yayasan"
+                  :src="`aset/perusahaan/${selectedpt.img}`"
+                  alt="...."
                 />
                 <div class="ml-3">
-                  <p x-text="item.pt" class="text-sm font-medium text-gray-800">
+                  <p
+                    x-text="selectedpt.nama"
+                    class="text-sm font-medium text-gray-800"
+                  >
                     Yayasan Mardi Waluyo Sukabumi
                   </p>
                   <p x-text="item.alamat" class="text-sm text-gray-600">
@@ -634,7 +656,7 @@
 
       <!-- Start rating -->
       <section
-        class="font-poppins text-black mt-[4.5rem] m-auto max-w-[1280px] flex justify-between"
+        class="font-poppins text-black m-auto max-w-[1280px] flex justify-between"
       >
         <!-- Start Rating -->
         <section class="py-24 relative">
@@ -895,7 +917,10 @@
                   </div>
                 </div>
 
-                <p class="font-normal text-lg leading-8 text-gray-500">
+                <p
+                  x-text="selectedpt.comments"
+                  class="font-normal text-lg leading-8 text-gray-500"
+                >
                   I recently had the opportunity to explore Pagedone's UI design
                   system, and it left a lasting impression on my workflow. The
                   system seamlessly blends user-friendly features with a robust
