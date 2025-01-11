@@ -377,11 +377,29 @@
               <p class="mb-4 text-sm font-normal text-gray-800"></p>
 
               <div class="text-center">
-                <p class="mb-3 text-2xl font-semibold leading-5 text-slate-900">
+                <p
+                  x-show="!register"
+                  class="mb-3 text-2xl font-semibold leading-5 text-slate-900"
+                >
                   Login ke Liveup
                 </p>
-                <p class="mt-2 text-sm leading-4 text-slate-600">
+                <p
+                  x-show="register"
+                  class="mb-3 text-2xl font-semibold leading-5 text-slate-900"
+                >
+                  Daftar ke Liveup
+                </p>
+                <p
+                  x-show="!register"
+                  class="mt-2 text-sm leading-4 text-slate-600"
+                >
                   login untuk dapat melakukan beberapa hal
+                </p>
+                <p
+                  x-show="register"
+                  class="mt-2 text-sm leading-4 text-slate-600"
+                >
+                  Daftar untuk dapat melakukan beberapa hal
                 </p>
               </div>
 
@@ -418,9 +436,23 @@
               </div>
 
               <form @submit.prevent="login(); loginpop = false" class="w-full">
+                <label x-show="register" for="username" class="sr-only"
+                  >Nama</label
+                >
+                <input
+                  name="username"
+                  type="text"
+                  id="usernamex"
+                  autocomplete="Username"
+                  required=""
+                  class="mb-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                  placeholder="Username"
+                  value=""
+                />
                 <label for="email" class="sr-only">Email</label>
                 <input
                   name="email"
+                  x-show="register"
                   type="email"
                   id="emailx"
                   autocomplete="email"
@@ -440,8 +472,23 @@
                   placeholder="Password"
                   value=""
                 />
+                <label x-show="register" for="repeat-password" class="sr-only"
+                  >Repeat Password</label
+                >
+                <input
+                  x-show="register"
+                  id="repeat-passwordx"
+                  name="repeat-password"
+                  type="password"
+                  required=""
+                  class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                  placeholder="Repeat Password"
+                  value=""
+                />
                 <p class="mb-3 mt-2 text-sm text-gray-500">
-                  <a class="text-blue-800 hover:text-blue-600" x-hide="register"
+                  <a
+                    class="text-blue-800 hover:text-blue-600"
+                    x-show="!register"
                     >Lupa password?</a
                   >
                 </p>
@@ -449,13 +496,35 @@
                   type="submit"
                   class="inline-flex w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
                 >
-                  Login
+                  <p x-show="!register">Login</p>
+                  <p x-show="register">Daftar</p>
                 </button>
               </form>
 
-              <div class="mt-6 text-center text-sm text-slate-600">
+              <div
+                x-show="!register"
+                class="mt-6 text-center text-sm text-slate-600"
+              >
                 Belum punya akun?
-                <a href="/signup" class="font-medium text-[#4285f4]">Sign up</a>
+                <button
+                  @click="register = true; console.log(register);"
+                  class="font-medium text-[#4285f4]"
+                >
+                  Sign up
+                </button>
+              </div>
+
+              <div
+                x-show="register"
+                class="mt-6 text-center text-sm text-slate-600"
+              >
+                Sudah punya akun?
+                <button
+                  @click="register = false;"
+                  class="font-medium text-[#4285f4]"
+                >
+                  Login
+                </button>
               </div>
             </div>
           </div>

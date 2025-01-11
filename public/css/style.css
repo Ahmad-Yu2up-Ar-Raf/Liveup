@@ -902,6 +902,10 @@ select{
   bottom: -3rem;
 }
 
+.-bottom-28{
+  bottom: -7rem;
+}
+
 .-bottom-8{
   bottom: -2rem;
 }
@@ -1008,30 +1012,6 @@ select{
 
 .top-full{
   top: 100%;
-}
-
-.bottom-10{
-  bottom: 2.5rem;
-}
-
-.-bottom-10{
-  bottom: -2.5rem;
-}
-
-.-bottom-16{
-  bottom: -4rem;
-}
-
-.-bottom-20{
-  bottom: -5rem;
-}
-
-.-bottom-24{
-  bottom: -6rem;
-}
-
-.-bottom-28{
-  bottom: -7rem;
 }
 
 .z-0{
@@ -1212,6 +1192,10 @@ select{
   margin-left: auto;
 }
 
+.mr-2{
+  margin-right: 0.5rem;
+}
+
 .mr-3{
   margin-right: 0.75rem;
 }
@@ -1302,10 +1286,6 @@ select{
 
 .mt-\[8rem\]{
   margin-top: 8rem;
-}
-
-.mr-2{
-  margin-right: 0.5rem;
 }
 
 .box-border{
@@ -1571,16 +1551,16 @@ select{
   height: 65vh;
 }
 
+.h-\[6rem\]{
+  height: 6rem;
+}
+
 .h-\[7rem\]{
   height: 7rem;
 }
 
 .h-\[8\.4rem\]{
   height: 8.4rem;
-}
-
-.h-\[8rem\]{
-  height: 8rem;
 }
 
 .h-\[90\%\]{
@@ -1606,14 +1586,6 @@ select{
 
 .h-px{
   height: 1px;
-}
-
-.h-\[4rem\]{
-  height: 4rem;
-}
-
-.h-\[6rem\]{
-  height: 6rem;
 }
 
 .max-h-72{
@@ -1792,6 +1764,10 @@ select{
   width: 635px;
 }
 
+.w-\[6rem\]{
+  width: 6rem;
+}
+
 .w-\[7rem\]{
   width: 7rem;
 }
@@ -1820,10 +1796,6 @@ select{
   width: 85%;
 }
 
-.w-\[8rem\]{
-  width: 8rem;
-}
-
 .w-\[90\%\]{
   width: 90%;
 }
@@ -1847,22 +1819,6 @@ select{
 
 .w-full{
   width: 100%;
-}
-
-.w-\[2rem\]{
-  width: 2rem;
-}
-
-.w-\[4rem\]{
-  width: 4rem;
-}
-
-.w-\[6rem\]{
-  width: 6rem;
-}
-
-.w-\[5rem\]{
-  width: 5rem;
 }
 
 .min-w-0{

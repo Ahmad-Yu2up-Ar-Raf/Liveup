@@ -448,7 +448,9 @@
                   value=""
                 />
                 <p class="mb-3 mt-2 text-sm text-gray-500">
-                  <a class="text-blue-800 hover:text-blue-600" x-hide="register"
+                  <a
+                    class="text-blue-800 hover:text-blue-600"
+                    x-show="!register"
                     >Lupa password?</a
                   >
                 </p>
@@ -474,9 +476,7 @@
         <div class="flex items-center justify-between max-w-7xl m-auto">
           <div class="flex items-center gap-x-3">
             <div class="flex items-center space-x-3 relative">
-              <h1 class="text-[2rem] font-[500] font-poppins text-teal-700">
-                Liveup
-              </h1>
+              <h1 class="text-[2rem] font-[500] text-teal-700">Liveup</h1>
             </div>
 
             <div class="flex relative items-center lg:hidden">
@@ -720,11 +720,7 @@
     <!-- end Navbar -->
 
     <!-- Start FInd -->
-    <div
-      id="findsx"
-      x-show="showfind"
-      class="font-poppins text-white w-[95%] m-auto"
-    >
+    <div id="findsx" x-show="showfind" class="text-white w-[95%] m-auto">
       <!-- Start Search card -->
       <section
         class="flex justify-center flex-col gap-4 items-center w-full lg:max-w-[1280px] lg:h-[30rem] h-[25rem] bg-[#005D5F] m-auto rounded-xl mt-4"
@@ -784,7 +780,7 @@
 
       <!-- Start Comp -->
       <section
-        class="font-montserrat text-black max-w-[1280px] justify-center flex flex-wrap gap-3 m-auto mt-8"
+        class="text-black max-w-[1280px] justify-center flex flex-wrap gap-3 m-auto mt-8"
       >
         <!-- x-for="(item, index) in [...Array(9)].map(() => items[Math.floor(Math.random() * items.length)])" -->
         <template x-for="(item, index) in items" :key="index"
@@ -814,7 +810,7 @@
                 </p>
               </div>
             </div>
-            <div class="font-poppins w-full flex flex-col gap-4">
+            <div class="w-full flex flex-col gap-4">
               <div class="w-full flex flex-col gap-1">
                 <div class="flex gap-2">
                   <svg
@@ -881,11 +877,7 @@
     <!-- EndFInd -->
 
     <!-- Start View -->
-    <div
-      id="viewx"
-      x-show="selectedpt"
-      class="font-poppins text-white w-[95%] m-auto"
-    >
+    <div id="viewx" x-show="selectedpt" class="text-white w-[95%] m-auto">
       <!-- start Banner -->
       <section
         class="relative flex justify-center flex-col gap-4 items-center w-full lg:max-w-[1360px] h-[18rem] bg-[#005D5F] m-auto rounded-xl mt-4"
@@ -905,7 +897,7 @@
 
       <!-- Start Title -->
       <section class="mt-[4.5rem] m-auto max-w-[1280px]">
-        <div class="font-poppins text-black flex w-full flex-col gap-1">
+        <div class="text-black flex w-full flex-col gap-1">
           <h1 x-text="selectedpt.nama" class="m-0 font-semibold text-[1.5rem]">
             PT Indofood Sukses Makmur Tbk.
           </h1>
@@ -953,7 +945,7 @@
 
       <!-- Start Deskripsi -->
       <section
-        class="font-poppins text-black mt-[4.5rem] m-auto max-w-[1280px] lg:gap-0 gap-4 lg:flex-row flex-col flex justify-between"
+        class="text-black mt-[4.5rem] m-auto max-w-[1280px] lg:gap-0 gap-4 lg:flex-row flex-col flex justify-between"
       >
         <!-- Start about -->
         <div
@@ -961,11 +953,11 @@
         >
           <h1 class="font-medium text-[1.2rem]">Tentang Perusahaan</h1>
           <div class="flex-col gap-1">
-            <div class="font-poppins flex">
+            <div class="flex">
               <h1 class="font-medium w-[29%]">Industri</h1>
               <p x-text="selectedpt.cat" class="">Food And Beverage</p>
             </div>
-            <div class="font-poppins flex">
+            <div class="flex">
               <h1 class="font-medium w-[29%]">Ukuran Perusahaan</h1>
               <p x-text="selectedpt.ukuran" class="">1000 - 5000 Karyawan</p>
             </div>
@@ -1042,7 +1034,7 @@
 
       <!-- Start Lowongan -->
       <section
-        class="lg:min-h-[4rem] font-poppins text-black mt-[2rem] m-auto max-w-[1280px] flex flex-col py-5 justify-between"
+        class="lg:min-h-[4rem] text-black mt-[2rem] m-auto max-w-[1280px] flex flex-col py-5 justify-between"
       >
         <h1
           class="font-medium text-[1.2rem]"
@@ -1150,9 +1142,7 @@
       <!-- End Lowongan -->
 
       <!-- Start rating -->
-      <section
-        class="font-poppins text-black m-auto max-w-[1280px] flex justify-between"
-      >
+      <section class="text-black m-auto max-w-[1280px] flex justify-between">
         <!-- Start Rating -->
         <section class="py-24 relative">
           <div class="w-full max-w-7xl px-4 md:px-5 lg:px-6 mx-auto">
@@ -1278,7 +1268,7 @@
                           class="sm:pr-3 sm:border-r border-gray-200 flex items-center justify-center flex-col"
                         >
                           <h2
-                            class="font-poppins font-bold text-5xl text-black text-center mb-4"
+                            class="font-bold text-5xl text-black text-center mb-4"
                           >
                             4.3
                           </h2>
@@ -1316,7 +1306,7 @@
                           class="sm:pl-3 sm:border-l border-gray-200 flex items-center justify-center flex-col"
                         >
                           <h2
-                            class="font-poppins font-bold text-5xl text-black text-center mb-4"
+                            class="font-bold text-5xl text-black text-center mb-4"
                           >
                             4.8
                           </h2>
@@ -1371,9 +1361,7 @@
                 </div>
               </div>
               <div class="pb-8 border-gray-200 max-xl:max-w-3xl max-xl:mx-auto">
-                <h4
-                  class="font-poppins font-semibold text-2xl leading-10 text-black mb-6"
-                >
+                <h4 class="font-semibold text-2xl leading-10 text-black mb-6">
                   Ulasan yang membantu
                 </h4>
                 <div
@@ -1438,7 +1426,7 @@
 
     <!-- Footer -->
     <footer
-      class="text-white font-poppins lg:h-[30rem] h-[26rem] w-full flex flex-col justify-center items-center bg-[#010505] mt-[8rem]"
+      class="text-white lg:h-[30rem] h-[26rem] w-full flex flex-col justify-center items-center bg-[#010505] mt-[8rem]"
     >
       <div
         class="w-[80vw] bg flex flex-col h-[90%] lg:flex-row justify-between"
@@ -1446,14 +1434,10 @@
         <div
           class="py-[3rem] h-full w-full lg:w-[28%] flex flex-col justify-between"
         >
-          <h1
-            class="text-[1.5rem] lg:text-[2.5rem] font-[500] font-poppins text-teal-700"
-          >
+          <h1 class="text-[1.5rem] lg:text-[2.5rem] font-[500] text-teal-700">
             Liveup
           </h1>
-          <p
-            class="text-[1rem] font-poppins font-light lg:w-[80%] w-full text-[#ffffffea]"
-          >
+          <p class="text-[1rem] font-light lg:w-[80%] w-full text-[#ffffffea]">
             Jl. Poras No.07, RT.01/RW.04, Loji, Kec. Bogor Bar., Kota Bogor,
             Jawa Barat 16117
           </p>
