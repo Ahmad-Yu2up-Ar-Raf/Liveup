@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/preline@1.0.0/dist/preline.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <script
+      src="https://cdn.userway.org/widget.js"
+      data-account="TtT4SkBcgi"
+    ></script>
+  </head>
+  <body class="">
+    <div
+      id="bg-black"
+      class="lg:hidden fixed w-full min-h-screen z-50 transition ease-in-out duration-500 bg-black io invisible top-0"
+    ></div>
+    <div
+      id="bg-black2"
+      class="lg:hidden fixed w-full min-h-screen z-30 transition ease-in-out duration-500 bg-black io invisible"
+    ></div>
+    <div
+      id="bg-black3"
+      class="lg:hidden fixed w-full min-h-screen z-30 transition ease-in-out duration-500 bg-black io invisible"
+    ></div>
+    <header
+      id="headers"
+      class="w-full bg-white border-b-2 lg:py-4 z-40 relative top-0"
+    >
+      <nav class="px-5 items-center lg:border-b lg:pb-4 my-4 lg:my-0">
+        <div class="flex justify-between max-w-7xl m-auto">
+          <div class="flex items-center gap-x-3">
+            <div class="flex lg:space-x-14">
+              <div class="flex items-center space-x-3 relative">
+                <img src="aset/logo - svg.svg" alt="" class="w-9 lg:w-12" />
+                <h1 class="lg:text-3xl text-2xl font-semibold text-teal-700">
+                  Liveup
+                </h1>
+              </div>
+              <ul
+                id="dropdown"
+                class="left-0 py-4 px-5 h-80 z-20 lg:space-x-10 absolute w-full lg:w-fit lg:h-fit lg:top-0 lg:relative lg:bg-transparent lg:shadow-none lg:flex lg:scale-y-100 bg-white top-full space-y-6 lg:space-y-0 transition duration-300 ease-in-out shadow-lg origin-top scale-y-0 border-t-2 lg:border-t-0"
+              >
+                <li class="link transition-all duration-300 ease-in-out">
+                  <a href="tentang.html">Tentang Kami</a>
+                </li>
+                <li class="link transition-all duration-300 ease-in-out">
+                  <a href="#">Jelajahi Perusahaan</a>
+                </li>
+                <li
+                  class="link link-active transition-all duration-300 ease-in-out"
+                >
+                  <a href="#">Memulai Karir</a>
+                </li>
+                <li class="link transition-all duration-300 ease-in-out">
+                  <a href="konsultasi.html">Konsultasi</a>
+                </li>
+              </ul>
+            </div>
+            <div class="flex relative items-center lg:hidden">
+              <button
+                id="hamburger"
+                name="hamburger"
+                type="button"
+                class="block border p-1 rounded-lg"
+              >
+                <i class="ri-more-2-fill"></i>
+                <!-- <span class="hamburger-line origin-top-left transition duration-300 ease-in-out "></span>
+<span class="w-[20px]  h-[2px] my-2 block bg-black transition duration-300 ease-in-out"></span>
+<span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span> -->
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <div class="lg:hidden">
+              <i
+                class="ri-search-2-line text-gray-400 hover:text-black text-[17px] rounded-full text-lg py-2 px-2 cursor-pointer transition ease-in duration-200 hover:bg-slate-100"
+              ></i>
+            </div>
+            <div class="lg:flex rounded-xl items-center">
+              <i
+                class="ri-global-line text-gray-400 lg:px-2 lg:py-1 hover:text-black lg:inline text-lg cursor-pointer hover:bg-slate-100 lg:text-teal-500 lg:border rounded-full w-fit h-fit px-2 py-2"
+              ></i>
+              <div class="flex-1 w-48 hidden lg:inline-block">
+                <!-- Select -->
+                <select
+                  data-hs-select='{
+"placeholder": "Select assignee",
+"toggleTag": "  <span class=\"text-gray-800 w-full \" data-title></span>",
+"toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-3 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border-none border-gray-200 rounded-lg text-start text-sm focus:outline-none focus:ring-2 focus:ring-blue-500",
+"dropdownClasses": "mt-2 max-h-72 p-1 space-y-0.5 z-20 w-full bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+"optionClasses": "py-2 px-3 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
+"optionTemplate": "<div class=\"flex items-center\"><div class=\"me-2\" data-icon></div><div><div class=\"hs-selected:font-semibold text-sm text-gray-800 \" data-title></div></div><div class=\"ms-auto\"><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-4 text-blue-600\" xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" viewBox=\"0 0 16 16\"><path d=\"M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z\"/></svg></span></div></div>",
+"extraMarkup": "<div class=\" hidden absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+}'
+                  class="hidden"
+                >
+                  <option value="">Choose</option>
+                  <option
+                    value="1"
+                    selected=""
+                    data-hs-select-option='{
+    "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/2560px-Flag_of_the_United_Kingdom.svg.png\" alt=\"Aland Islands\" />"}'
+                  >
+                    English
+                  </option>
+                  <option
+                    value="2"
+                    data-hs-select-option='{
+    "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png\" alt=\"Aland Islands\" />"}'
+                  >
+                    Deutsch
+                  </option>
+                  <option
+                    value="3"
+                    data-hs-select-option='{
+    "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/2560px-Flag_of_Indonesia.svg.png\" />"}'
+                  >
+                    Bahasa
+                  </option>
+                </select>
+                <!-- End Select -->
+              </div>
+            </div>
+
+            <div class="flex items-center lg:space-x-3">
+              <div class="flex lg:gap-x-2">
+                <div class="hidden lg:inline-block">
+                  <i
+                    class="ri-question-line text-lg text-gray-400 hover:bg-slate-100 p-2 transition ease-in duration-100 rounded-full cursor-pointer hover:text-black"
+                  ></i>
+                </div>
+                <div class="relative">
+                  <i
+                    class="ri-notification-3-line text-lg text-gray-400 hover:bg-slate-100 p-2 transition ease-in duration-100 rounded-full cursor-pointer hover:text-black"
+                  ></i>
+                  <span class="absolute top-0 end-0 block">
+                    <span class="relative flex h-3 w-3">
+                      <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"
+                      ></span>
+                      <span
+                        class="relative inline-flex rounded-full h-3 w-3 bg-sky-500 border-2 border-white"
+                      ></span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+
+              <div
+                class="relative inline-block border-l-2 pl-4 ml-2 lg:ml-0 border-gray-100"
+              >
+                <img
+                  class="inline-block size-[38px] rounded-full"
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                  alt="Avatar"
+                />
+                <!-- <span class="absolute top-0 end-0 block ">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75 "></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500 border-2 border-white"></span>
+                  </span>
+            </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="ccc2">
+        <div
+          id="search"
+          class="py-4 transition duration-300 ease-in-out w-full bg-slate-100 lg:bg-white top-full m-auto px-5"
+        >
+          <ul
+            class="bg-white rounded-md space-y-3 max-w-7xl lg:space-y-0 m-auto lg:flex lg:space-x-6"
+          >
+            <li
+              class="flex w-full group lg:w-[90%] items-center border-b lg:border-b-0 px-2 lg:px-0 lg:border-r-2 lg:pr-2"
+            >
+              <i
+                class="ri-search-line transition ease-in duration-200 group-hover:bg-teal-400 group-hover:text-white text-teal-500 lg:border rounded-full w-fit h-fit px-2 py-1"
+              ></i>
+              <div class="flex-1">
+                <select
+                  data-hs-select='{
+            "hasSearch": true,
+            "searchPlaceholder": "Search...",
+            "searchClasses": "block w-full text-sm border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1] py-2 px-3 focus:outline-none",
+            "searchWrapperClasses": "bg-white p-2 -mx-1 sticky top-0",
+            "placeholder": "kata kunci",
+            "toggleTag": "  <span class=\"text-gray-800 w-full   \" data-title></span>",
+            "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-3 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-white rounded-lg text-start text-sm focus:outline-none focus:ring-0 focus:ring-white",
+            "dropdownClasses": "mt-2 max-h-72 pb-1 px-1 space-y-0.5 z-20 w-full bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+            "optionClasses": "py-2 px-4 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
+            "optionTemplate": "<div><div class=\"flex items-center\"><div class=\"me-2\" data-icon></div><div class=\"text-gray-800 \" data-title></div></div></div>",
+            "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"shrink-0 size-3.5 text-gray-500\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"2\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19 9l-7 7-7-7\" /></svg></div>"
+          }'
+                  class="hidden"
+                >
+                  <option value="">Choose</option>
+                  <option
+                    value="AF"
+                    data-hs-select-option='{
+                "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png\" alt=\"Aland Islands\" />"}'
+                  >
+                    America
+                  </option>
+                  <option
+                    value="AX"
+                    data-hs-select-option='{
+              "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/2560px-Flag_of_the_United_Kingdom.svg.png\" alt=\"Aland Islands\" />"}'
+                  >
+                    Enggland
+                  </option>
+                  <option
+                    value="AL"
+                    data-hs-select-option='{
+                "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/2560px-Flag_of_Indonesia.svg.png\" />"}'
+                  >
+                    Indonesia
+                  </option>
+                </select>
+              </div>
+            </li>
+            <li
+              class="flex w-full group lg:w-[70%] items-center border-b lg:border-b-0 px-2 lg:px-0 lg:border-r-2 lg:pr-3"
+            >
+              <i
+                class="ri-map-pin-line transition ease-in duration-200 group-hover:bg-teal-400 group-hover:text-white text-teal-500 lg:border rounded-full w-fit h-fit px-2 py-1"
+              ></i>
+              <div class="flex-1">
+                <select
+                  data-hs-select='{
+            "hasSearch": true,
+            "searchPlaceholder": "Search...",
+            "searchClasses": "block w-full text-sm border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1] py-2 px-3 focus:outline-none",
+            "searchWrapperClasses": "bg-white p-2 -mx-1 sticky top-0",
+            "placeholder": "Semua lokasi",
+            "toggleTag": "  <span class=\"text-gray-800 w-full \" data-title></span>",
+            "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-3 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-white rounded-lg text-start text-sm focus:outline-none focus:ring-0 focus:ring-white",
+            "dropdownClasses": "mt-2 max-h-72 pb-1 px-1 space-y-0.5 z-20 w-full bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+            "optionClasses": "py-2 px-4 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
+            "optionTemplate": "<div><div class=\"flex items-center\"><div class=\"me-2\" data-icon></div><div class=\"text-gray-800 \" data-title></div></div></div>",
+            "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"shrink-0 size-3.5 text-gray-500\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"2\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19 9l-7 7-7-7\" /></svg></div>"
+          }'
+                  class="hidden"
+                >
+                  <option value="">Choose</option>
+                  <option
+                    value="AF"
+                    data-hs-select-option='{
+                "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png\" alt=\"Aland Islands\" />"}'
+                  >
+                    America
+                  </option>
+                  <option
+                    value="AX"
+                    data-hs-select-option='{
+              "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/2560px-Flag_of_the_United_Kingdom.svg.png\" alt=\"Aland Islands\" />"}'
+                  >
+                    Enggland
+                  </option>
+                  <option
+                    value="AL"
+                    data-hs-select-option='{
+              "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/2560px-Flag_of_Indonesia.svg.png\" />"}'
+                  >
+                    Indonesia
+                  </option>
+                </select>
+              </div>
+            </li>
+            <li
+              class="flex w-full group transition ease-in duration-200 group-hover:bg-teal-500 group-hover:text-white lg:w-[70%] items-center border-b lg:border-b-0 px-2 lg:px-0 lg:border-r-2 lg:pr-3"
+            >
+              <i
+                class="ri-file-copy-line transition ease-in duration-200 group-hover:bg-teal-400 group-hover:text-white text-teal-500 lg:border rounded-full w-fit h-fit px-2 py-1"
+              ></i>
+              <div class="flex-1">
+                <select
+                  data-hs-select='{
+            "hasSearch": true,
+            "searchPlaceholder": "Search...",
+            "searchClasses": "block w-full text-sm border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1] py-2 px-3 focus:outline-none",
+            "searchWrapperClasses": "bg-white p-2 -mx-1 sticky top-0",
+            "placeholder": "Semua kategori",
+            "toggleTag": "  <span class=\"text-gray-800 w-full \" data-title></span>",
+            "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-3 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-white rounded-lg text-start text-sm focus:outline-none focus:ring-0 focus:ring-white",
+            "dropdownClasses": "mt-2 max-h-72 pb-1 px-1 space-y-0.5 z-20 w-full bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+            "optionClasses": "py-2 px-4 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
+            "optionTemplate": "<div><div class=\"flex items-center\"><div class=\"me-2\" data-icon></div><div class=\"text-gray-800 \" data-title></div></div></div>",
+            "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"shrink-0 size-3.5 text-gray-500\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"2\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19 9l-7 7-7-7\" /></svg></div>"
+          }'
+                  class="hidden"
+                >
+                  <option value="">Choose</option>
+                  <option
+                    value="AF"
+                    data-hs-select-option='{
+                "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/800px-Flag_of_the_United_States.svg.png\" alt=\"Aland Islands\" />"}'
+                  >
+                    America
+                  </option>
+                  <option
+                    value="AX"
+                    data-hs-select-option='{
+              "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/2560px-Flag_of_the_United_Kingdom.svg.png\" alt=\"Aland Islands\" />"}'
+                  >
+                    Enggland
+                  </option>
+                  <option
+                    value="AL"
+                    data-hs-select-option='{
+              "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/2560px-Flag_of_Indonesia.svg.png\" />"}'
+                  >
+                    Indonesia
+                  </option>
+                </select>
+              </div>
+            </li>
+            <li
+              class="flex w-full group lg:w-[70%] items-center border-b lg:border-b-0 px-2 lg:px-0 lg:border-r-2 lg:pr-3"
+            >
+              <i
+                class="ri-community-line transition ease-in duration-200 group-hover:bg-teal-400 group-hover:text-white text-teal-500 lg:border rounded-full w-fit h-fit px-2 py-1"
+              ></i>
+              <div class="flex-1">
+                <select
+                  data-hs-select='{
+            "hasSearch": true,
+            "searchPlaceholder": "Search...",
+            "searchClasses": "block w-full text-sm border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 before:absolute before:inset-0 before:z-[1] py-2 px-3 focus:outline-none",
+            "searchWrapperClasses": "bg-white p-2 -mx-1 sticky top-0",
+            "placeholder": "Perusahaan",
+            "toggleTag": "  <span class=\"text-gray-800 w-full \" data-title></span>",
+            "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-3 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-white rounded-lg text-start text-sm focus:outline-none focus:ring-0 focus:ring-white",
+            "dropdownClasses": "mt-2 max-h-72 pb-1 px-1 space-y-0.5 z-20 w-full bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+            "optionClasses": "py-2 px-4 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
+            "optionTemplate": "<div><div class=\"flex items-center\"><div class=\"me-2\" data-icon></div><div class=\"text-gray-800 \" data-title></div></div></div>",
+            "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"shrink-0 size-3.5 text-gray-500\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"2\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19 9l-7 7-7-7\" /></svg></div>"
+          }'
+                  class="hidden"
+                >
+                  <option value="">Choose</option>
+                  <option
+                    value="AF"
+                    data-hs-select-option='{
+                "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSTLNyHEp8ERADDJDy5wXQLoV_Lj0YTmv6eA&s\" alt=\"Aland Islands\" />"}'
+                  >
+                    Google
+                  </option>
+                  <option
+                    value="AX"
+                    data-hs-select-option='{
+              "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-512.png\" alt=\"Aland Islands\" />"}'
+                  >
+                    Amazon
+                  </option>
+                  <option
+                    value="AT"
+                    data-hs-select-option='{
+              "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0IfOkcWr8-EaVzxrC5Pv7E4moEf10NrvhVw&s\" />"}'
+                  >
+                    Microsoft
+                  </option>
+                  <option
+                    value="AC"
+                    data-hs-select-option='{
+              "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338507_960_720.png\" />"}'
+                  >
+                    Facebook
+                  </option>
+                  <option
+                    value="AO"
+                    data-hs-select-option='{
+              "icon": "<img class=\"inline-block size-4 rounded-full\" src=\"https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456\" />"}'
+                  >
+                    Netflix
+                  </option>
+                </select>
+              </div>
+            </li>
+            <li
+              class="w-full items-center border-b lg:border-b-0 pb-6 px-4 lg:pb-0 lg:px-0 lg:pl-4"
+            >
+              <div class="flex justify-between mb-5">
+                <h1 class="lg:text-sm lg:font-medium lg:text-gray-500">
+                  kisaran gaji
+                </h1>
+                <div class="flex justify-center w-fit">
+                  <div class="flex items-center text-sm">
+                    <div
+                      id="hs-pass-values-to-html-elements-min-target"
+                      class="text-center min-w-16"
+                    >
+                      250
+                    </div>
+                    -
+                    <div
+                      id="hs-pass-values-to-html-elements-max-target"
+                      class="text-center min-w-16"
+                    >
+                      750
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <label class="sr-only">Example range</label>
+              <div
+                id="hs-pass-values-to-html-elements"
+                class="--prevent-on-load-init w-full block"
+                data-hs-range-slider='{
+                            "start": [250, 750],
+                            "range": {
+                              "min": 0,
+                              "max": 1000
+                            },
+                            "formatter": {
+                              "type": "integer",
+                              "prefix": "$"
+                            },
+                            "connect": true,
+                            "cssClasses": {
+                              "target": "relative h-2 lg:h-[0.45em] rounded-full bg-gray-200",
+                              "base": "w-full h-full relative z-1",
+                              "origin": "absolute top-0 end-0 w-full h-full origin-[0_0] rounded-full",
+                              "handle": "absolute top-1/2 end-0 w-[1.125rem] h-[1.125rem] lg:w-[0.9rem] lg:h-[0.9rem] bg-white  border-4  border-teal-400 rounded-full cursor-pointer translate-x-2/4 -translate-y-2/4",
+                              "connects": "relative z-0 w-full h-full rounded-full overflow-hidden",
+                              "connect": "absolute top-0 end-0 z-1 w-full h-full bg-teal-400 origin-[0_0]",
+                              "touchArea": "absolute -top-1 -bottom-1 -start-1 -end-1"
+                           
+                            }
+                          }'
+              ></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="py-10 px-5 min-h-screen content-center">
+      <div
+        class="max-w-7xl m-auto lg:grid lg:grid-cols-7 lg:grid-rows-11 lg:gap-6"
+        x-data="{ tagsList: ['Full-Times',  'Part-Times',  'Freelance']}"
+      >
+        <div class="lg:col-span-2 lg:row-span-11 lg:space-y-4 overflow-auto">
+          <div
+            class="w-full relative px-8 pt-20 h-[24em] bg-center-top bg-[length:130%] bg-no-repeat rounded-2xl hidden lg:inline-block"
+            style="
+              background-image: url('aset/simone-hutsch-TpcAurk1ePU-unsplash.jpg');
+            "
+          >
+            <h1
+              class="text-white text-[2.30rem] font-josefin left-9 top-11 leading-9"
+            >
+              Have Tallent ? Meet Your Oppurtunites
+            </h1>
+          </div>
+          <div
+            id="Filters-bar"
+            class="top-0 z-50 lg:z-0 transition ease-in-out duration-300 delay-75 w-72 translate-x-full lg:translate-x-0 bg-white right-0 min-h-screen lg:min-h-0 h-full fixed overflow-y-scroll lg:overflow-y-visible lg:relative lg:w-full lg:shadow-md lg:rounded-lg lg:h-fit lg:px-3 lg:border no-scrollbar"
+          >
+            <div class="lg:px-1">
+              <div
+                class="flex justify-between items-center w-full lg:px-0 px-5 py-6 border-b border-gray-300"
+              >
+                <h1
+                  class="font-medium text-xl lg:text-xl flex gap-x-3 items-center"
+                >
+                  <svg
+                    width="23px"
+                    height="23px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 11C8.65685 11 10 12.3431 10 14C10 15.6569 8.65685 17 7 17C5.34315 17 4 15.6569 4 14C4 12.3431 5.34315 11 7 11Z"
+                      stroke="black"
+                      stroke-width="2"
+                      class="my-path"
+                    ></path>
+                    <path
+                      d="M17 13C15.3431 13 14 11.6569 14 10C14 8.34315 15.3431 7 17 7C18.6569 7 20 8.34315 20 10C20 11.6569 18.6569 13 17 13Z"
+                      stroke="black"
+                      stroke-width="2"
+                      class="my-path"
+                    ></path>
+                    <path
+                      d="M7 21L7 17"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      class="my-path"
+                    ></path>
+                    <path
+                      d="M17 3L17 7"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      class="my-path"
+                    ></path>
+                    <path
+                      d="M7 8L7 3"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      class="my-path"
+                    ></path>
+                    <path
+                      d="M17 16L17 21"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      class="my-path"
+                    ></path></svg
+                  ><span>Filter By</span>
+                </h1>
+                <i
+                  id="close-filter"
+                  class="ri-close-large-fill lg:hidden text-gray-400 cursor-pointer"
+                ></i>
+              </div>
+            </div>
+            <ul class="relative">
+              <li class="haha lg:px-0 w-full px-5 pt-6 border-b">
+                <div
+                  id="cao"
+                  class="flex justify-between items-center mb-7 lg:px-1"
+                >
+                  <h1 class="font-medium text-lg lg:text-base">
+                    Tipe Pekerjaan
+                  </h1>
+                  <i
+                    id="ini"
+                    class="ri-arrow-down-s-line transition duration-75 ease-in rotate-180 text-gray-400 cursor-pointer"
+                  ></i>
+                </div>
+                <ul class="content-tag ccc pl-1">
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 mt-1 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Full-Times"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+
+                    <label
+                      for="filter-mobile-color-1"
+                      class="font-[400] text-base lg:text-sm"
+                      >Full-Times</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Part-Times"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-2"
+                      class="font-[400] text-base lg:text-sm"
+                      >Part-Times</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Freelance"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-3"
+                      class="font-[400] text-base lg:text-sm"
+                      >Freelance</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Contract"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-4"
+                      class="font-[400] text-base lg:text-sm"
+                      >Contract</label
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="haha lg:px-0 h-fit w-full px-5 pt-6 border-b">
+                <div
+                  id="cao"
+                  class="flex justify-between items-center mb-7 lg:px-1"
+                >
+                  <h1 class="font-medium text-lg lg:text-base">Tipe Kerja</h1>
+                  <i
+                    id="ini"
+                    class="ri-arrow-down-s-line transition duration-75 ease-in rotate-180 text-gray-400 cursor-pointer"
+                  ></i>
+                </div>
+                <ul class="content-tag ccc pl-1">
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 mt-1 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="On-Site"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+
+                    <label
+                      for="filter-mobile-color-1"
+                      class="font-[400] text-base lg:text-sm"
+                      >On-Site</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Remote"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-2"
+                      class="font-[400] text-base lg:text-sm"
+                      >Remote</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Hybrid"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-3"
+                      class="font-[400] text-base lg:text-sm"
+                      >Hybrid</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Flexible Hours"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-4"
+                      class="font-[400] text-base lg:text-sm"
+                      >Flexible Hours</label
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="haha lg:px-0 w-full px-5 pt-6 border-b">
+                <div
+                  id="cao"
+                  class="flex justify-between items-center mb-7 lg:px-1"
+                >
+                  <h1 class="font-medium text-lg lg:text-base">Tipe Staff</h1>
+                  <i
+                    id="ini"
+                    class="ri-arrow-down-s-line transition duration-75 ease-in text-gray-400 cursor-pointer"
+                  ></i>
+                </div>
+                <ul class="content-tag ccc1 pl-1">
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 mt-1 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Permanent"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+
+                    <label
+                      for="filter-mobile-color-1"
+                      class="font-[400] text-base lg:text-sm"
+                      >Permanent</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Temporary"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-2"
+                      class="font-[400] text-base lg:text-sm"
+                      >Temporary</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Internship"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-3"
+                      class="font-[400] text-base lg:text-sm"
+                      >Internship</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Apprenticeship"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-4"
+                      class="font-[400] text-base lg:text-sm"
+                      >Apprenticeship</label
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="haha lg:px-0 w-full px-5 pt-6 border-b lg:border-b-0">
+                <div
+                  id="cao"
+                  class="flex justify-between items-center mb-7 lg:px-1"
+                >
+                  <h1 class="font-medium text-lg lg:text-base">
+                    Fungsi Pekerjaan
+                  </h1>
+                  <i
+                    id="ini"
+                    class="ri-arrow-down-s-line transition duration-75 ease-in text-gray-400 cursor-pointer"
+                  ></i>
+                </div>
+                <ul class="content-tag ccc1 pl-1">
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 mt-1 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Engineering"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+
+                    <label
+                      for="filter-mobile-color-1"
+                      class="font-[400] text-base lg:text-sm"
+                      >Engineering</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Sales & Marketing"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-2"
+                      class="font-[400] text-base lg:text-sm"
+                      >Sales & Marketing</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7 lg:mb-5"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Human Resources"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-3"
+                      class="font-[400] text-base lg:text-sm"
+                      >Human Resources</label
+                    >
+                  </li>
+                  <li
+                    class="flex items-center content-center space-x-3 text-black text-opacity-60 mb-7"
+                  >
+                    <input
+                      type="checkbox"
+                      value="Finance & Accounting"
+                      class="shrink-0 mt-0.5 border-gray-200 rounded text-teal-600 focus:ring-teal-500 disabled:opacity-50 cursor-pointer dark:border-neutral-500 dark:checked:bg-teal-500 dark:checked:border-teal-500"
+                      id="hs-success-checkbox"
+                      x-model="tagsList"
+                    />
+                    <label
+                      for="filter-mobile-color-4"
+                      class="font-[400] text-base lg:text-sm"
+                      >Finance & Accounting</label
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="lg:col-span-5 lg:row-span-11 lg:col-start-3"
+          x-bind:class="tagsList.length > 0 ? 'lg:space-y-4' : 'lg:space-y-7'"
+        >
+          <div
+            id=""
+            class="border-b-2 pb-7 lg:pb-0 relative mb-7 lg:mb-0 flex items-center justify-between"
+            x-bind:class="tagsList.length > 0 ? 'lg:border-b-0' : 'border-b-2 lg:pb-7' "
+            x-data="{open : false}"
+          >
+            <div class="flex items-center lg:space-x-5 flex-wrap">
+              <h1 class="font-semibold text-4xl lg:text-[2.50rem] lg:mb-0">
+                Pekerjaan <span class="text-teal-400"> Tersedia</span>
+              </h1>
+              <span
+                class="font-medium border-[1px] border-gray-400 h-8 text-base content-center rounded-full w-14 text-center hidden lg:inline"
+                >329</span
+              >
+            </div>
+            <div class="gap-x-4 flex items-center">
+              <div
+                x-on:click="open = !open"
+                @click.outside="open = false"
+                class="cursor-pointer flex gap-x-1 items-center lg:space-x-3"
+              >
+                <h1
+                  class="text-base lg:text-gray-400 font-medium lg:font-normal text-gray-600"
+                >
+                  Sort <span class="hidden lg:inline-block"></span>
+                  <span class="text-black hidden lg:inline-block">Popular</span>
+                </h1>
+                <i class="ri-filter-3-line text-xl hidden lg:inline-block"></i
+                ><i
+                  x-bind:class="open ? 'rotate-180' : 'rotate-0'"
+                  class="mt-1 text-gray-600 text-xl w-fit transition-all ease-in duration-100 ri-arrow-down-s-line lg:hidden"
+                ></i>
+              </div>
+              <button
+                onclick="sideBar()"
+                class="text-gray-400 hover:text-black text-2xl lg:hidden hover:bg-slate-100 rounded-full py-1 px-2"
+              >
+                <i class="ri-filter-2-fill"></i>
+              </button>
+            </div>
+
+            <div
+              x-show="open"
+              x-transition.origin.top.right.duration.100ms
+              class="lg:right-0 z-10 top-11 right-10 w-40 py-1 lg:top-full rounded-md shadow-lg border-2 absolute bg-white inline-block"
+            >
+              <button
+                class="py-2 w-full text-start hover:bg-gray-100 rounded-none border-0 px-4 block text-gray-500 lg:text-sm"
+              >
+                Most Popular
+              </button>
+              <button
+                class="py-2 w-full text-start hover:bg-gray-100 rounded-none border-0 px-4 block text-gray-500 lg:text-sm"
+              >
+                Best Rating
+              </button>
+              <button
+                class="py-2 w-full text-start hover:bg-gray-100 rounded-none border-0 px-4 block text-gray-500 lg:text-sm"
+              >
+                Newest
+              </button>
+            </div>
+          </div>
+          <div
+            id="Taggsss"
+            class="w-full hidden lg:flex bg-slate-50 h-fit py-4 border-t border-b px-4 justify-between items-center"
+            x-show="tagsList.length > 0"
+          >
+            <div class="flex space-x-5">
+              <div class="py-2">
+                <div
+                  class="font-medium text-gray-500 pr-6 border-r-[1px] border-gray-300 content-center h-full"
+                >
+                  Tags
+                </div>
+              </div>
+              <div id="Tags" class="flex flex-wrap items-center gap-2">
+                <template x-for="tag in tagsList">
+                  <div
+                    class="bg-white rounded-full h-9 cursor-pointer border-2 w-fit px-4 flex space-x-3 items-center"
+                  >
+                    <span class="pb-1 font-medium" x-text="tag"></span
+                    ><i
+                      id="close-filter"
+                      class="ri-close-line text-sm text-gray-500 transition ease-in duration-100 hover:text-black"
+                      @click=" tagsList = tagsList.filter(i => i !== tag)"
+                    ></i>
+                  </div>
+                </template>
+              </div>
+            </div>
+            <div class="group w-fit h-fit relative">
+              <i
+                class="ri-delete-bin-5-fill rounded-full p-1 cursor-pointer text-xl transition ease-in duration-300 text-gray-400 hover:scale-125 hover:text-black"
+                x-on:click="tagsList = []"
+              ></i>
+
+              <span
+                class="bg-black transition ease-in-out duration-100 font-medium -top-9 bg-opacity-75 -right-4 text-white shadow border rounded-md group-hover:scale-100 w-16 h-7 content-center absolute text-xs text-center scale-0"
+                >Clear All</span
+              >
+            </div>
+          </div>
+          <div
+            class="space-y-7 w-full md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-y-7 md:space-y-0 lg:gap-x-6"
+            x-data="lowongan"
+          >
+            <template x-for="(job, index) in jobs" x-key="index">
+              <div
+                x-on:click="window.location.href=`detail.html?id=${job.id}`"
+                class="px-3 py-5 border rounded-xl shadow-md w-full lg:px-4 cursor-pointer transition ease-linear duration-100 hover:-translate-y-1"
+              >
+                <div class="flex justify-between items-center mb-2">
+                  <div class="flex space-x-2">
+                    <img
+                      :src="`${job.img}`"
+                      :alt="job.name"
+                      class="rounded-full border border-gray-400 shadow-lg w-12 h-12 lg:w-11 lg:h-11"
+                    />
+                    <div class="">
+                      <h1
+                        class="font-semibold text-xl lg:text-base"
+                        x-text="job.name"
+                      ></h1>
+                      <h1
+                        class="text-gray-400 flex space-x-1 text-xs lg:text-[10px]"
+                      >
+                        <i class="ri-map-pin-line"></i
+                        ><span x-text="job.locasion"></span>
+                      </h1>
+                    </div>
+                  </div>
+                  <button
+                    x-on:click.stop="job.saved === false ? job.saved = true : job.saved = false,     console.log(job.saved)"
+                    class="rounded-full text-xl flex space-x-2 lg:text-base hover:bg-slate-100 px-2 py-1 w-fit"
+                    x-bind:class="job.saved === true ? 'text-black ' : 'text-gray-500 ' "
+                  >
+                    <i
+                      class="save"
+                      x-bind:class="job.saved === true ? 'ri-bookmark-fill' : 'ri-bookmark-line' "
+                    ></i>
+                  </button>
+                </div>
+                <div class="">
+                  <div class="mb-2">
+                    <h1
+                      class="font-semibold text-xl mb-1 lg:mb-0 lg:text-base"
+                      x-text="job.title"
+                    ></h1>
+                    <div class="flex space-x-3">
+                      <p
+                        class="text-gray-400 flex space-x-1 text-xs lg:text-[10px]"
+                      >
+                        <i class="ri-briefcase-2-line"></i
+                        ><span x-text="job.jobType"></span>
+                      </p>
+                      <p
+                        class="text-gray-400 flex space-x-1 text-xs lg:text-[10px]"
+                      >
+                        <i class="ri-time-line"></i
+                        ><span>Posted 5 month ago</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="border-b mb-5 border-black pb-5">
+                    <p
+                      class="text-sm mb-4 lg:text-xs lg:w-[93%]"
+                      x-text="job.desk"
+                    ></p>
+                    <div class="flex gap-x-2">
+                      <template x-for="tag1 in job.tags2">
+                        <button
+                          class="text-xs text-gray-500 border px-3 py-1 w-fit rounded-md lg:text-[10px]"
+                          x-text="tag1"
+                        ></button>
+                      </template>
+                      <!-- <button class=" text-xs text-gray-500 border px-3 py-1  w-fit rounded-md lg:text-[10px] ">Computer</button>
+                                           <button class=" text-xs text-gray-500 border px-3 py-1  w-fit rounded-md lg:text-[10px] ">Developer</button> -->
+                    </div>
+                  </div>
+                  <div class="flex justify-between mb-2">
+                    <h1 class="font-semibold text-lg lg:text-base">
+                      <span class="" x-text="job.salary"></span
+                      ><span class="font-normal text-xs lg:text-[10px]"
+                        >/hour</span
+                      >
+                    </h1>
+                    <button
+                      class="text-white group text-xs bg-black rounded-lg w-fit px-6 py-2 space-x-2 font-semibold lg:text-[10px] group lg:rounded-full"
+                      x-on:click.stop="window.location.href=`apply.html?id=${job.id}`"
+                    >
+                      <span class="">Lamar</span
+                      ><i class="ri-arrow-right-fill text-sm lg:text-xs"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+          <div
+            class="flex mt-7 items-center border-t-2 md:border-t-0 justify-between md:px-4 py-5"
+          >
+            <button
+              class="text-gray-500 flex items-center hover:text-black gap-x-2 transition ease-in duration-100"
+            >
+              <i class="ri-arrow-left-line lg:text-lg text-xl"></i
+              ><span class="lg:text-sm text-lg font-medium md:font-normal"
+                >Previous</span
+              >
+            </button>
+
+            <div class="hidden md:flex gap-x-5">
+              <div class="paggination font-medium cursor-pointer px-2">
+                <span class=" ">01</span>
+              </div>
+              <div class="paggination font-medium cursor-pointer px-2">
+                <span class=" ">02</span>
+              </div>
+              <div class="paggination font-medium cursor-pointer px-2">
+                <span class=" ">03</span>
+              </div>
+              <div class="paggination font-medium cursor-pointer px-2">
+                <span class=" ">...</span>
+              </div>
+              <div class="paggination font-medium cursor-pointer px-2">
+                <span class=" ">10</span>
+              </div>
+              <div class="paggination font-medium cursor-pointer px-2">
+                <span class=" ">11</span>
+              </div>
+              <div class="paggination font-medium cursor-pointer px-2">
+                <span class=" ">12</span>
+              </div>
+            </div>
+
+            <button
+              class="flex items-center text-gray-500 hover:text-black gap-x-2 transition ease-in duration-100"
+            >
+              <span class="lg:text-sm text-lg font-medium md:font-normal"
+                >Next</span
+              ><i class="ri-arrow-right-line lg:text-lg text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="text-white font-poppins lg:h-[30rem] h-[26rem] w-full flex flex-col justify-center items-center bg-[#010505] mt-[8rem]"
+    >
+      <div
+        class="w-[80vw] bg flex flex-col h-[90%] lg:flex-row justify-between"
+      >
+        <div
+          class="py-[3rem] h-full w-full lg:w-[28%] flex flex-col justify-between"
+        >
+          <h1
+            class="text-[1.5rem] lg:text-[2.5rem] font-[500] font-poppins text-teal-700"
+          >
+            Liveup
+          </h1>
+          <p
+            class="text-[1rem] font-poppins font-light lg:w-[80%] w-full text-[#ffffffea]"
+          >
+            Jl. Poras No.07, RT.01/RW.04, Loji, Kec. Bogor Bar., Kota Bogor,
+            Jawa Barat 16117
+          </p>
+          <div class="h-[5rem] flex flex-col gap-[1rem]">
+            <div class="flex items-center justify-center gap-3 w-fit">
+              <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg
+                class="size-7"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              0823229911872
+            </div>
+            <div class="flex items-center justify-center gap-3 w-fit">
+              <svg
+                class="size-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 9.00005L10.2 13.65C11.2667 14.45 12.7333 14.45 13.8 13.65L20 9"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3 9.17681C3 8.45047 3.39378 7.78123 4.02871 7.42849L11.0287 3.5396C11.6328 3.20402 12.3672 3.20402 12.9713 3.5396L19.9713 7.42849C20.6062 7.78123 21 8.45047 21 9.17681V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V9.17681Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              hello@liveup.id
+            </div>
+          </div>
+          <div class="w-[10rem] flex justify-between">
+            <div
+              class="size-10 rounded-full border border-[#ffffffe0] flex justify-center items-center"
+            >
+              <svg
+                class="size-6"
+                viewBox="0 -0.5 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18.168 19.0028C20.4724 19.0867 22.41 17.29 22.5 14.9858V9.01982C22.41 6.71569 20.4724 4.91893 18.168 5.00282H6.832C4.52763 4.91893 2.58998 6.71569 2.5 9.01982V14.9858C2.58998 17.29 4.52763 19.0867 6.832 19.0028H18.168Z"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.008 9.17784L15.169 11.3258C15.3738 11.4454 15.4997 11.6647 15.4997 11.9018C15.4997 12.139 15.3738 12.3583 15.169 12.4778L12.008 14.8278C11.408 15.2348 10.5 14.8878 10.5 14.2518V9.75184C10.5 9.11884 11.409 8.77084 12.008 9.17784Z"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div
+              class="size-10 rounded-full border border-[#ffffffe0] flex justify-center items-center"
+            >
+              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+              <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg
+                class="size-5"
+                viewBox="0 0 20 20"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs></defs>
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Dribbble-Light-Preview"
+                    transform="translate(-340.000000, -7439.000000)"
+                    fill="#ffffff"
+                  >
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                        id="instagram-[#167]"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div
+              class="size-10 rounded-full border border-[#ffffffe0] flex justify-center items-center"
+            >
+              <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg
+                fill="#ffffff"
+                class="size-6"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="py-[3rem] text-right h-full w-full lg:w-[20%] flex-col gap-[2rem] lg:block hidden"
+        >
+          <p class="w-full">Resources</p>
+          <ul class="w-full space-y-3">
+            <li>Bantuan</li>
+            <li>Riview Liveup</li>
+            <li>Blog</li>
+            <li>Tentang Kami</li>
+            <li>Konsulatasi</li>
+            <li>Daftar Perusahaan</li>
+            <li>Loker Liveup</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="w-[80vw] flex justify-center items-center font-light text-center text-[0.9rem] py-4 border-t-[1px] border-white"
+      >
+        Copyrights Â© 2025, SMK Informatika Pesat. All rights Reserved
+      </div>
+    </footer>
+    <script src="../node_modules/nouislider/dist/nouislider.min.js"></script>
+    <script src="../node_modules/preline/preline.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        (function () {
+          const range = document.querySelector(
+            "#hs-pass-values-to-html-elements"
+          );
+          const rangeInstance = new HSRangeSlider(range);
+          const min = document.querySelector(
+            "#hs-pass-values-to-html-elements-min-target"
+          );
+          const max = document.querySelector(
+            "#hs-pass-values-to-html-elements-max-target"
+          );
+
+          range.noUiSlider.on("update", (values) => {
+            min.innerText = rangeInstance.formattedValue[0];
+            max.innerText = rangeInstance.formattedValue[1];
+          });
+        })();
+      });
+    </script>
+
+    <script src="jobList.js"></script>
+    <script src="jobPage.js"></script>
+  </body>
+</html>

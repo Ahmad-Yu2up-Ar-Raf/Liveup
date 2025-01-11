@@ -27,6 +27,7 @@
     ></script>
   </head>
   <body class="bg-gray-100">
+    <!-- start Navbar -->
     <!-- SearchBox Modal -->
     <div
       id="html-example-using-modal-popup-with-shortcut-call-trigger"
@@ -303,11 +304,163 @@
     </div>
     <!-- End SearchBox -->
 
-    <!-- start Navbar -->
+    <!-- Login Handler -->
+    <script>
+      function login() {
+        const em = document.getElementById("emailx").checkValidity();
+        const pw = document.getElementById("passwordx").value.length;
+
+        if (em && pw > 0) {
+          document.cookie = "login=true; path=/; max-age=3600"; // Buat cookie
+          console.log("Logged in successfully");
+          location.reload();
+        }
+      }
+      function loginthird() {
+        document.cookie = "login=true; path=/; max-age=3600"; // Buat cookie
+        console.log("Logged in successfully");
+        location.reload();
+      }
+      function logout() {
+        document.cookie = "login=; path=/; max-age=0"; // Hapus cookie
+        console.log("Logged out successfully");
+        location.reload();
+      }
+      function isLogin() {
+        let cookies = document.cookie.split(";");
+        for (let cookie of cookies) {
+          let [key, value] = cookie.trim().split("=");
+          if (key === "login") {
+            return value === "true";
+          }
+        }
+        return false;
+      }
+    </script>
+    <!-- Login Handler End -->
+
     <header
+      id="header"
       class="w-full bg-white border-b-2 z-40 relative top-0"
-      x-data="{open:false}"
+      x-data="{ open: false, loginpop: false, register: false, logged: false, loginprop: false }"
+      x-init="logged = isLogin()"
     >
+      <div
+        x-show="loginpop"
+        class="bg-black/50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 h-full items-center justify-center flex"
+      >
+        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+          <div class="relative bg-white rounded-lg shadow">
+            <button
+              type="button"
+              @click="loginpop = false"
+              class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center popup-close"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="#c6c7c7"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  cliprule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close popup</span>
+            </button>
+
+            <div class="p-5">
+              <h3 class="text-2xl mb-0.5 font-medium"></h3>
+              <p class="mb-4 text-sm font-normal text-gray-800"></p>
+
+              <div class="text-center">
+                <p class="mb-3 text-2xl font-semibold leading-5 text-slate-900">
+                  Login ke Liveup
+                </p>
+                <p class="mt-2 text-sm leading-4 text-slate-600">
+                  login untuk dapat melakukan beberapa hal
+                </p>
+              </div>
+
+              <div class="mt-7 flex flex-col gap-2">
+                <button
+                  @click="loginthird(); loginpop = false"
+                  class="inline-flex h-10 w-full items-center justify-center gap-2 rounded border border-slate-300 bg-white p-2 text-sm font-medium text-black outline-none focus:ring-2 focus:ring-[#333] focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  <img
+                    src="https://www.svgrepo.com/show/475656/google-color.svg"
+                    alt="Google"
+                    class="h-[18px] w-[18px]"
+                  />Continue with Google
+                </button>
+
+                <button
+                  @click="loginthird(); loginpop = false"
+                  class="inline-flex h-10 w-full items-center justify-center gap-2 rounded border border-slate-300 bg-white p-2 text-sm font-medium text-black outline-none focus:ring-2 focus:ring-[#333] focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  <img
+                    src="https://www.svgrepo.com/show/448234/linkedin.svg"
+                    alt="Google"
+                    class="h-[18px] w-[18px]"
+                  />Continue with LinkedIn
+                </button>
+              </div>
+
+              <div
+                class="flex w-full items-center gap-2 py-6 text-sm text-slate-600"
+              >
+                <div class="h-px w-full bg-slate-200"></div>
+                ATAU
+                <div class="h-px w-full bg-slate-200"></div>
+              </div>
+
+              <form @submit.prevent="login(); loginpop = false" class="w-full">
+                <label for="email" class="sr-only">Email</label>
+                <input
+                  name="email"
+                  type="email"
+                  id="emailx"
+                  autocomplete="email"
+                  required=""
+                  class="block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                  placeholder="Email"
+                  value=""
+                />
+                <label for="password" class="sr-only">Password</label>
+                <input
+                  id="passwordx"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  required=""
+                  class="mt-2 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
+                  placeholder="Password"
+                  value=""
+                />
+                <p class="mb-3 mt-2 text-sm text-gray-500">
+                  <a class="text-blue-800 hover:text-blue-600" x-hide="register"
+                    >Lupa password?</a
+                  >
+                </p>
+                <button
+                  type="submit"
+                  class="inline-flex w-full items-center justify-center rounded-lg bg-black p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400"
+                >
+                  Login
+                </button>
+              </form>
+
+              <div class="mt-6 text-center text-sm text-slate-600">
+                Belum punya akun?
+                <a href="/signup" class="font-medium text-[#4285f4]">Sign up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav
         class="px-5 lg:mb-0 items-center lg:border-b lg:pb-4 lg:py-3 my-4 lg:my-0"
       >
@@ -433,16 +586,76 @@
                   class="relative inline-block border-l-2 pl-4 ml-2 lg:ml-0 border-gray-100"
                 >
                   <img
-                    class="inline-block size-[38px] rounded-full"
-                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                    @click="loginpop = true"
+                    x-show="!logged"
+                    class="inline-block size-[38px] rounded-full hover:cursor-pointer"
+                    src="aset/unloged.png"
                     alt="Avatar"
                   />
-                  <!-- <span class="absolute top-0 end-0 block ">
-                  <span class="relative flex h-3 w-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75 "></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500 border-2 border-white"></span>
-                    </span>
-              </span> -->
+
+                  <img
+                    @click="loginprop = !loginprop"
+                    x-show="logged"
+                    class="inline-block w-10 h-10 rounded-full cursor-pointer"
+                    src="aset/profile.png"
+                    alt="Profile Avatar"
+                  />
+
+                  <!-- Dropdown Menu -->
+                  <div
+                    x-show="loginprop"
+                    @click.away="loginprop = false"
+                    class="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg"
+                    style="display: none"
+                  >
+                    <ul class="py-1">
+                      <!-- Profile Option -->
+                      <li>
+                        <a
+                          href="#"
+                          class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          <img
+                            src="aset/profile.png"
+                            alt="Profile Icon"
+                            class="w-5 h-5 mr-2 rounded-full"
+                          />
+                          Profile
+                        </a>
+                      </li>
+                      <!-- Logout Option -->
+                      <li>
+                        <a
+                          href="#"
+                          @click="logout()"
+                          class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 mr-2"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"
+                            />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                          </svg>
+                          Logout
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- <div
+                    x-show="loginprop"
+                    class="absolute -bottom-28 left-0 bg-white w-[6rem] h-[6rem] rounded-lg border border-gray-300"
+                  ></div> -->
                 </div>
               </div>
             </div>
@@ -463,27 +676,33 @@
               class="lg:flex block space-y-10 lg:space-y-0 lg:gap-x-10"
             >
               <li
-                class="link2 w-full lg:w-fit lg:inline-block flex justify-between transition-all duration-300 ease-in-out"
-              >
-                <span>Tentang Kami</span>
-                <i class="ri-arrow-right-s-line lg:hidden"></i>
-              </li>
-              <li
-                class="link2 w-full lg:w-fit lg:inline-block flex justify-between transition-all duration-300 ease-in-out"
-              >
-                <span>Jelajahi Perusahaan</span>
-                <i class="ri-arrow-right-s-line lg:hidden"></i>
-              </li>
-              <li
                 class="link2 link2-active w-full lg:w-fit lg:inline-block flex justify-between transition-all duration-300 ease-in-out"
               >
-                <span>Memulai Karir</span>
+                <a href="index.html">Home</a>
                 <i class="ri-arrow-right-s-line lg:hidden"></i>
               </li>
               <li
                 class="link2 w-full lg:w-fit lg:inline-block flex justify-between transition-all duration-300 ease-in-out"
               >
-                <span>Konsultasi</span>
+                <a>Tentang Kami</a>
+                <i class="ri-arrow-right-s-line lg:hidden"></i>
+              </li>
+              <li
+                class="link2 w-full lg:w-fit lg:inline-block flex justify-between transition-all duration-300 ease-in-out"
+              >
+                <a href="perusahaan.html">Jelajahi Perusahaan</a>
+                <i class="ri-arrow-right-s-line lg:hidden"></i>
+              </li>
+              <li
+                class="link2 w-full lg:w-fit lg:inline-block flex justify-between transition-all duration-300 ease-in-out"
+              >
+                <a href="jobPage.html">Memulai Karir</a>
+                <i class="ri-arrow-right-s-line lg:hidden"></i>
+              </li>
+              <li
+                class="link2 w-full lg:w-fit lg:inline-block flex justify-between transition-all duration-300 ease-in-out"
+              >
+                <a href="konsultasi.html">Konsultasi</a>
                 <i class="ri-arrow-right-s-line lg:hidden"></i>
               </li>
             </ul>
@@ -652,7 +871,7 @@
               </div>
             </div>
             <div
-              class="transition-colors cursor-pointer flex justify-between align-top w-full h-24 px-5 py-2"
+              class="transition-colors cursor-pointer flex border-b border-gray-300 justify-between align-top w-full h-24 px-5 py-2"
             >
               <div class="w-fit flex flex-col gap-[0.1rem]">
                 <h1 class="font-medium font-poppins">Graphic Designer</h1>
