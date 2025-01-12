@@ -19,7 +19,10 @@
     "@fontsource/montserrat": "^5.1.1",
     "@fontsource/poppins": "^5.1.1",
     "@preline/combobox": "^2.5.2",
+    "@preline/file-upload": "^2.5.2",
     "@preline/select": "^2.6.0",
+    "dropzone": "^6.0.0-beta.2",
+    "lodash": "^4.17.21",
     "nouislider": "^15.8.1",
     "preline": "^2.6.0",
     "tailwind-scrollbar": "^3.1.0"

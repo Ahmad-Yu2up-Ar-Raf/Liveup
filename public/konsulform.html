@@ -1558,6 +1558,43 @@
               9000 1234 5678 901 <span class="font-bold">BRI</span>
             </p>
           </button>
+          <div
+            data-hs-file-upload='{
+            "url": "/upload",
+            "maxFiles": 1,
+            "singleton": true
+          }'
+          >
+            <template data-hs-file-upload-preview="">
+              <div class="flex items-center w-full">
+                <span
+                  class="grow-0 overflow-hidden truncate"
+                  data-hs-file-upload-file-name=""
+                ></span>
+                <span class="grow-0">.</span>
+                <span class="grow-0" data-hs-file-upload-file-ext=""></span>
+              </div>
+            </template>
+
+            <button
+              type="button"
+              class="relative flex w-full border overflow-hidden border-gray-200 shadow-sm rounded-lg text-sm focus:outline-none focus:z-10 focus:border-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+            >
+              <span class="h-full py-3 px-4 bg-gray-100 text-nowrap"
+                >Upload bukti</span
+              >
+              <span
+                class="group grow flex overflow-hidden h-full py-3 px-4"
+                data-hs-file-upload-previews=""
+              >
+                <span class="group-has-[div]:hidden">No Chosen File</span>
+              </span>
+              <span
+                class="absolute top-0 left-0 w-full h-full"
+                data-hs-file-upload-trigger=""
+              ></span>
+            </button>
+          </div>
         </div>
 
         <div class="w-full mt-24 h-[7rem] flex justify-between items-start">
@@ -1859,6 +1896,8 @@
       </div>
     </footer>
     <!-- End Footer -->
+    <script src="./node_modules/lodash/lodash.min.js"></script>
+    <script src="./node_modules/dropzone/dist/dropzone-min.js"></script>
   </body>
   <script>
     var SelectedPackage = 0;

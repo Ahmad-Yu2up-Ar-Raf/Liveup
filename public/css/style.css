@@ -1905,6 +1905,10 @@ select{
   flex-grow: 1;
 }
 
+.grow-0{
+  flex-grow: 0;
+}
+
 .origin-\[0_0\]{
   transform-origin: 0 0;
 }
@@ -3943,6 +3947,10 @@ select{
   opacity: 1;
 }
 
+.group:has(div) .group-has-\[div\]\:hidden{
+  display: none;
+}
+
 .open.hs-overlay-open\:opacity-100{
   opacity: 1;
 }
@@ -4152,6 +4160,10 @@ select{
 .hover\:shadow-teal-400:hover{
   --tw-shadow-color: #2dd4bf;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.focus\:z-10:focus{
+  z-index: 10;
 }
 
 .focus\:border-blue-500:focus{
