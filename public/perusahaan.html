@@ -785,6 +785,7 @@
         <!-- x-for="(item, index) in [...Array(9)].map(() => items[Math.floor(Math.random() * items.length)])" -->
         <template x-for="(item, index) in items" :key="index"
           ><div
+            data-aos="fade-down"
             @click="showview = true; selectedpt = item; showfind = false; scrollToTop()"
             class="group p-3 w-[46%] md:w-[49%] lg:w-[32.5%] min-h-[13rem] flex flex-col justify-between hover:shadow-[0px_4px_6px_0px_rgba(0,_0,_0,_0.1)] border bg-white border-gray-400 hover:border-gray-500 cursor-pointer rounded-lg"
           >
